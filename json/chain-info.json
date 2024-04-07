@@ -18,7 +18,7 @@
 		"fullName":"Ethereum Mainnet",
 		"nativeCoin":"ETH",
 		"decimal":18,
-		"rpc":"https://eth.llamarpc.com",
+		"rpc":"https://eth-mainnet.public.blastapi.io",
 		"blockScan":"https://etherscan.io/"
 	},
 	"10":{
@@ -75,17 +75,6 @@
 		"decimal":18,
 		"rpc":"https://polygon-rpc.com/",
 		"blockScan":"https://polygonscan.com/"
-	},
-	"238":{
-		"en": true,
-		"hexID":"0xee",
-		"ID":238,
-		"name":"Blast",
-		"fullName":"Blast Mainnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://rpc.blastblockchain.com/",
-		"blockScan":"https://blastscan.io/"
 	},
 	"250":{
 		"en": false,
@@ -207,6 +196,17 @@
 		"decimal":18,
 		"rpc":"https://rpc.linea.build",
 		"blockScan":"https://lineascan.build/"
+	},
+	"81457":{
+		"en": true,
+		"hexID":"0x13e31",
+		"ID":81457,
+		"name":"Blast",
+		"fullName":"Blast Mainnet",
+		"nativeCoin":"ETH",
+		"decimal":18,
+		"rpc":"https://rpc.blast.io",
+		"blockScan":"https://blastscan.io/"
 	},
 	"534352":{
 		"en": true,
