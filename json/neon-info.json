@@ -1,0 +1,117 @@
+{
+    "database":{
+        "address": ""
+    },
+    "chains":{
+        "11155111":{
+            "resolver": "",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "56":{
+            "resolver": "0xD424B4d1361430ed778D38C43A27777Aa7ea4749",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "324":{
+            "resolver": "0xf4aa9E0c00c22908c6E2941C5d481ef85bcb0e85",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "5000":{
+            "resolver": "0x061aa070B50513c3C34E5b1abf3Fc3d3Ea6033c8",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "8453":{
+            "resolver": "0x5E435B0B56aB36b795f14ab8Ee965b8199dD7fc2",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "34443":{
+            "resolver": "0x9f8Ef82473b66Ba320c92FF81A950Ce430Ba386c",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "42161":{
+            "resolver": "0x5cD40e7Ad842F2d5E88BC0a62701ecf2c0Cdc5E1",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "59144":{
+            "resolver": "0xf6Bc71f9cd6b009cF6EA1F4008ed4151d740362d",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "81457":{
+            "resolver": "0x8488e9BFD06f87E2A80BBc6dc72b8AE2639595d6",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        },
+        "534352":{
+            "resolver": "0xc2eA7A1317B53541E12F85696A6614c8675Cd3c0",
+            "NUI":{
+                "address": "",
+                "abi": ""
+            },
+            "NRI":{
+                "address": "",
+                "abi": ""
+            }
+        }
+    }
+}

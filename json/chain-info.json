@@ -186,17 +186,6 @@
 		"rpc":"https://avalanche.blockpi.network/v1/rpc/public",
 		"blockScan":"https://snowtrace.io/"
 	},
-	"81457":{
-		"en": true,
-		"hexID":"0x13e31",
-		"ID":81457,
-		"name":"Blast",
-		"fullName":"Blast Mainnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://blastl2-mainnet.public.blastapi.io",
-		"blockScan":"https://blastscan.io/"
-	},
 	"59144":{
 		"en": true,
 		"hexID":"0xe708",
