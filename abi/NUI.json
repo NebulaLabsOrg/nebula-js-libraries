@@ -1,0 +1,515 @@
+{
+    "name": "NUI",
+    "chainId": 534352,
+    "address": "0x14A8F007735d76637C71525d6255cB783c829E92",
+    "args": [],
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [],
+            "name": "NotAuthorized",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "ADMIN",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "NRI",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_srcToken",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_srcAmount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint40",
+                    "name": "_exeRequired",
+                    "type": "uint40"
+                }
+            ],
+            "name": "checkUserAllowance",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "incr",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "allowRequired",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "closeDCA",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_user",
+                    "type": "address"
+                }
+            ],
+            "name": "closePosition",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_receiver",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_srcToken",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_dstToken",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint8",
+                    "name": "_tau",
+                    "type": "uint8"
+                },
+                {
+                    "internalType": "uint40",
+                    "name": "_exeRequired",
+                    "type": "uint40"
+                },
+                {
+                    "internalType": "uint40",
+                    "name": "_exeStart",
+                    "type": "uint40"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_srcAmount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_limitOrderBuy",
+                    "type": "uint256"
+                }
+            ],
+            "name": "createDCA",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_NRI",
+                    "type": "address"
+                }
+            ],
+            "name": "init",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_srcToken",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_dstToken",
+                    "type": "address"
+                }
+            ],
+            "name": "isPositionFree",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "manageQueue",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "_length",
+                    "type": "uint40"
+                }
+            ],
+            "name": "purgeQueue",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "skipExecution",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "totalDCAs",
+            "outputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "",
+                    "type": "uint40"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "_id",
+                    "type": "uint40"
+                }
+            ],
+            "name": "userData",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "bool",
+                            "name": "toBeClosed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "identifier",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "receiver",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "srcToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "dstToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint8",
+                            "name": "tau",
+                            "type": "uint8"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "exeRequired",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "srcAmount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "limitOrderBuy",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct UserData",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "userDcaDetail",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "receiver",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint8",
+                            "name": "tau",
+                            "type": "uint8"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "nextExecution",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "lastExecution",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "srcAmount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "executionFee",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "limitOrderBuy",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct UserDetail",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "userDcas",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "bool",
+                            "name": "toBeClosed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "identifier",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "srcToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "dstToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint16",
+                            "name": "code",
+                            "type": "uint16"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "dateCreation",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "exeRequired",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "exePerformed",
+                            "type": "uint40"
+                        }
+                    ],
+                    "internalType": "struct UserDca[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "userQueue",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "bool",
+                            "name": "toBeClosed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "identifier",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "srcToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "dstToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint16",
+                            "name": "code",
+                            "type": "uint16"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "dateCreation",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "exeRequired",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "exePerformed",
+                            "type": "uint40"
+                        }
+                    ],
+                    "internalType": "struct UserDca[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "userTotalDca",
+            "outputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "",
+                    "type": "uint40"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "userTotalQueue",
+            "outputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "",
+                    "type": "uint40"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]
+}
