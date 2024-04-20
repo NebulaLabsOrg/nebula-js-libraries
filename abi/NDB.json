@@ -1,9 +1,4 @@
-{
-    "name": "NDB",
-    "chainId": 250,
-    "address": "0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
-    "args": [],
-    "abi": [
+[
         {
             "inputs": [],
             "stateMutability": "nonpayable",
@@ -173,4 +168,3 @@
             "type": "function"
         }
     ]
-}
