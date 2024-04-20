@@ -1,342 +1,421 @@
 {
-	"11155111":{
+	"11155111": {
 		"en": true,
-		"hexID":"0xaa36a7",
-		"ID":11155111,
-		"name":"Sepolia",
-		"fullName":"Ethereum Testnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://rpc2.sepolia.org",
-		"blockScan":"https://sepolia.etherscan.io/",
-		"dca":{
-			"resolver":"",
-			"database":"0x3984Bd8D61150C08E05D4aEDF630d54c954087c1",
-			"NUI":"0x02013e8B9E71D68748a964Edd333fe1dE44bC723",
-			"NRI":"0x768EA3Ad529f6E8A633496d96F4af8c60Aa62087"
+		"hexID": "0xaa36a7",
+		"ID": 11155111,
+		"name": "Sepolia",
+		"fullName": "Ethereum Testnet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://rpc2.sepolia.org"
+		],
+		"blockScan": "https://sepolia.etherscan.io/",
+		"dca": {
+			"resolver": "",
+			"database": "0x3984Bd8D61150C08E05D4aEDF630d54c954087c1",
+			"NUI": "0x02013e8B9E71D68748a964Edd333fe1dE44bC723",
+			"NRI": "0x768EA3Ad529f6E8A633496d96F4af8c60Aa62087"
 		}
 	},
-	"1":{
+	"1": {
 		"en": false,
-		"hexID":"0x1",
-		"ID":1,
-		"name":"Ethereum",
-		"fullName":"Ethereum Mainnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://eth.llamarpc.com",
-		"blockScan":"https://etherscan.io/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0x1",
+		"ID": 1,
+		"name": "Ethereum",
+		"fullName": "Ethereum Mainnet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://eth.llamarpc.com"
+		],
+		"blockScan": "https://etherscan.io/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"10":{
+	"10": {
 		"en": false,
-		"hexID":"0xa",
-		"ID":10,
-		"name":"Optimism",
-		"fullName":"Optimism",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://optimism-mainnet.infura.io",
-		"blockScan":"https://optimistic.etherscan.io/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0xa",
+		"ID": 10,
+		"name": "Optimism",
+		"fullName": "Optimism",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://optimism-mainnet.infura.io"
+		],
+		"blockScan": "https://optimistic.etherscan.io/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"25":{
+	"25": {
 		"en": false,
-		"hexID":"0x19",
-		"ID":25,
-		"name":"Cronos",
-		"fullName":"Cronos Mainenet",
-		"nativeCoin":"CRO",
-		"decimal":18,
-		"rpc":"https://cronos.blockpi.network/v1/rpc/public",
-		"blockScan":"https://cronoscan.com/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0x19",
+		"ID": 25,
+		"name": "Cronos",
+		"fullName": "Cronos Mainenet",
+		"nativeCoin": "CRO",
+		"decimal": 18,
+		"rpc": [
+			"https://cronos.blockpi.network/v1/rpc/public"
+		],
+		"blockScan": "https://cronoscan.com/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"56":{
+	"56": {
 		"en": true,
-		"hexID":"0x38",
-		"ID":56,
-		"name":"Binance",
-		"fullName":"Binance Smart Chain",
-		"nativeCoin":"BNB",
-		"decimal":18,
-		"rpc":"https://bsc-dataseed1.ninicoin.io/",
-		"blockScan":"https://bscscan.com/",
-		"dca":{
-			"resolver":"0xD424B4d1361430ed778D38C43A27777Aa7ea4749",
-			"database":"",
-			"NUI":"0xBCbf43aaA29f57CBA31a2CBFE3Cf05128a122D7B",
-			"NRI":"0x4319a2bA342751118562AeBD6750382032b9a2a1"
+		"hexID": "0x38",
+		"ID": 56,
+		"name": "Binance",
+		"fullName": "Binance Smart Chain",
+		"nativeCoin": "BNB",
+		"decimal": 18,
+		"rpc": [
+			"https://bsc-dataseed.bnbchain.org",
+			"https://bsc-dataseed2.bnbchain.org",
+			"https://bsc-dataseed3.bnbchain.org"
+		],
+		"blockScan": "https://bscscan.com/",
+		"dca": {
+			"resolver": "0xD424B4d1361430ed778D38C43A27777Aa7ea4749",
+			"database": "",
+			"NUI": "0xBCbf43aaA29f57CBA31a2CBFE3Cf05128a122D7B",
+			"NRI": "0x4319a2bA342751118562AeBD6750382032b9a2a1"
 		}
 	},
-	"100":{
+	"100": {
 		"en": false,
-		"hexID":"0x64",
-		"ID":100,
-		"name":"Gnosis",
-		"fullName":"Gnosis",
-		"nativeCoin":"xDAI",
-		"decimal":18,
-		"rpc":"https://rpc.gnosischain.com",
-		"blockScan":"https://gnosisscan.io/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0x64",
+		"ID": 100,
+		"name": "Gnosis",
+		"fullName": "Gnosis",
+		"nativeCoin": "xDAI",
+		"decimal": 18,
+		"rpc": [
+			"https://rpc.gnosischain.com"
+		],
+		"blockScan": "https://gnosisscan.io/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"137":{
+	"137": {
 		"en": false,
-		"hexID":"0x89",
-		"ID":137,
-		"name":"Polygon",
-		"fullName":"Polygon Mainnet",
-		"nativeCoin":"MATIC",
-		"decimal":18,
-		"rpc":"https://polygon-rpc.com/",
-		"blockScan":"https://polygonscan.com/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0x89",
+		"ID": 137,
+		"name": "Polygon",
+		"fullName": "Polygon Mainnet",
+		"nativeCoin": "MATIC",
+		"decimal": 18,
+		"rpc": [
+			"https://polygon-rpc.com/"
+		],
+		"blockScan": "https://polygonscan.com/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"250":{
+	"250": {
 		"en": false,
-		"hexID":"0xfa",
-		"ID":250,
-		"name":"Fantom",
-		"fullName":"Fantom Opera",
-		"nativeCoin":"FTM",
-		"decimal":18,
-		"rpc":"https://rpcapi.fantom.network",
-		"blockScan":"https://ftmscan.com/",
-		"dca":{
-			"resolver":"",
-			"database":"0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0xfa",
+		"ID": 250,
+		"name": "Fantom",
+		"fullName": "Fantom Opera",
+		"nativeCoin": "FTM",
+		"decimal": 18,
+		"rpc": [
+			"https://1rpc.io/ftm",
+			"https://rpcapi.fantom.network",
+			"https://fantom-rpc.publicnode.com"
+		],
+		"blockScan": "https://ftmscan.com/",
+		"dca": {
+			"resolver": "",
+			"database": "0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"324":{
+	"324": {
 		"en": true,
-		"hexID":"0x144",
-		"ID":324,
-		"name":"zkSync Era",
-		"fullName":"zkSync Era Mainnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://mainnet.era.zksync.io",
-		"blockScan":"https://explorer.zksync.io/",
-		"dca":{
-			"resolver":"0xf4aa9E0c00c22908c6E2941C5d481ef85bcb0e85",
-			"database":"",
-			"NUI":"0xc1aDf17d916D6607C1dc4b55e387a92c9E5F467A",
-			"NRI":"0x7c6718b0b352A0a5FBC42d05F7f40C8D9df78cb7"
+		"hexID": "0x144",
+		"ID": 324,
+		"name": "zkSync Era",
+		"fullName": "zkSync Era Mainnet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://mainnet.era.zksync.io",
+			"https://1rpc.io/zksync2-era",
+			"wss://zksync.drpc.org"
+		],
+		"blockScan": "https://explorer.zksync.io/",
+		"dca": {
+			"resolver": "0xf4aa9E0c00c22908c6E2941C5d481ef85bcb0e85",
+			"database": "",
+			"NUI": "0xc1aDf17d916D6607C1dc4b55e387a92c9E5F467A",
+			"NRI": "0x7c6718b0b352A0a5FBC42d05F7f40C8D9df78cb7"
 		}
 	},
-	"1101":{
+	"1101": {
 		"en": false,
-		"hexID":"0x44d",
-		"ID":1101,
-		"name":"zkEVM",
-		"fullName":"Polygon zkEVM",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://zkevm-rpc.com",
-		"blockScan":"https://zkevm.polygonscan.com/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0x44d",
+		"ID": 1101,
+		"name": "zkEVM",
+		"fullName": "Polygon zkEVM",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://zkevm-rpc.com"
+		],
+		"blockScan": "https://zkevm.polygonscan.com/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"1285":{
+	"1285": {
 		"en": false,
-		"hexID":"0x505",
-		"ID":1285,
-		"name":"Moonriver",
-		"fullName":"Moonriver",
-		"nativeCoin":"MOVR",
-		"decimal":18,
-		"rpc":"wss://moonriver.unitedbloc.com:2001",
-		"blockScan":"https://moonriver.moonscan.io/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0x505",
+		"ID": 1285,
+		"name": "Moonriver",
+		"fullName": "Moonriver",
+		"nativeCoin": "MOVR",
+		"decimal": 18,
+		"rpc": [
+			"wss://moonriver.unitedbloc.com:2001"
+		],
+		"blockScan": "https://moonriver.moonscan.io/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"5000":{
+	"5000": {
 		"en": true,
-		"hexID":"0x1388",
-		"ID":5000,
-		"name":"Mantle",
-		"fullName":"Mantle Mainnet",
-		"nativeCoin":"MNT",
-		"decimal":18,
-		"rpc":"https://rpc.mantle.xyz",
-		"blockScan":"https://explorer.mantle.xyz/",
-		"dca":{
-			"resolver":"0x061aa070B50513c3C34E5b1abf3Fc3d3Ea6033c8",
-			"database":"",
-			"NUI":"0x075E6Cbb9E2490Feed7C5b378edC961089Fa9552",
-			"NRI":"0x653d1F69B7e1eCf723683817C61580F8EeD1Cc92"
+		"hexID": "0x1388",
+		"ID": 5000,
+		"name": "Mantle",
+		"fullName": "Mantle Mainnet",
+		"nativeCoin": "MNT",
+		"decimal": 18,
+		"rpc": [
+			"https://rpc.mantle.xyz",
+			"https://1rpc.io/mantle",
+			"https://mantle.drpc.org"
+		],
+		"blockScan": "https://explorer.mantle.xyz/",
+		"dca": {
+			"resolver": "0x061aa070B50513c3C34E5b1abf3Fc3d3Ea6033c8",
+			"database": "",
+			"NUI": "0x075E6Cbb9E2490Feed7C5b378edC961089Fa9552",
+			"NRI": "0x653d1F69B7e1eCf723683817C61580F8EeD1Cc92"
 		}
 	},
-	"8453":{
+	"8453": {
 		"en": true,
-		"hexID":"0x2105",
-		"ID":8453,
-		"name":"Base",
-		"fullName":"Base Mainnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://1rpc.io/base",
-		"blockScan":"https://base.blockscout.com/",
-		"dca":{
-			"resolver":"0x5E435B0B56aB36b795f14ab8Ee965b8199dD7fc2",
-			"database":"",
-			"NUI":"0x2264555F9c31108032577cde806959e33C1D4387",
-			"NRI":"0xa2DaffbbA57a096567CE107A597813D245f7398a"
+		"hexID": "0x2105",
+		"ID": 8453,
+		"name": "Base",
+		"fullName": "Base Mainnet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://1rpc.io/base",
+			"wss://base-rpc.publicnode.com",
+			"https://base-rpc.publicnode.com"
+		],
+		"blockScan": "https://base.blockscout.com/",
+		"dca": {
+			"resolver": "0x5E435B0B56aB36b795f14ab8Ee965b8199dD7fc2",
+			"database": "",
+			"NUI": "0x2264555F9c31108032577cde806959e33C1D4387",
+			"NRI": "0xa2DaffbbA57a096567CE107A597813D245f7398a"
 		}
 	},
-	"34443":{
+	"34443": {
 		"en": true,
-		"hexID":"0x868b",
-		"ID":34443,
-		"name":"Mode",
-		"fullName":"Mode Mainnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://1rpc.io/mode",
-		"blockScan":"https://modescan.io/",
-		"dca":{
-			"resolver":"0x9f8Ef82473b66Ba320c92FF81A950Ce430Ba386c",
-			"database":"",
-			"NUI":"0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
-			"NRI":"0x14A8F007735d76637C71525d6255cB783c829E92"
+		"hexID": "0x868b",
+		"ID": 34443,
+		"name": "Mode",
+		"fullName": "Mode Mainnet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://1rpc.io/mode",
+			"https://mainnet.mode.network",
+			"wss://mode.drpc.org"
+		],
+		"blockScan": "https://modescan.io/",
+		"dca": {
+			"resolver": "0x9f8Ef82473b66Ba320c92FF81A950Ce430Ba386c",
+			"database": "",
+			"NUI": "0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
+			"NRI": "0x14A8F007735d76637C71525d6255cB783c829E92"
 		}
 	},
-	"42161":{
+	"42161": {
 		"en": true,
-		"hexID":"0xa4b1",
-		"ID":42161,
-		"name":"Arbitrum",
-		"fullName":"Arbitrum One",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://arb1.arbitrum.io/rpc",
-		"blockScan":"https://arbiscan.io/",
-		"dca":{
-			"resolver":"0x5cD40e7Ad842F2d5E88BC0a62701ecf2c0Cdc5E1",
-			"database":"",
-			"NUI":"0xb3aFf7F751fB41f8b7F95AC63eED4C5aaABbE0b4",
-			"NRI":"0x0669a068D28Ea31DD595a369b4B2Ca151A3Bd3a4"
+		"hexID": "0xa4b1",
+		"ID": 42161,
+		"name": "Arbitrum",
+		"fullName": "Arbitrum One",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://arb-pokt.nodies.app",
+			"https://1rpc.io/arb",
+			"wss://arbitrum-one-rpc.publicnode.com"
+		],
+		"blockScan": "https://arbiscan.io/",
+		"dca": {
+			"resolver": "0x5cD40e7Ad842F2d5E88BC0a62701ecf2c0Cdc5E1",
+			"database": "",
+			"NUI": "0xb3aFf7F751fB41f8b7F95AC63eED4C5aaABbE0b4",
+			"NRI": "0x0669a068D28Ea31DD595a369b4B2Ca151A3Bd3a4"
 		}
 	},
-	"42220":{
+	"42220": {
 		"en": false,
-		"hexID":"0xa4ec",
-		"ID":42220,
-		"name":"Celo",
-		"fullName":"Celo Mainnet",
-		"nativeCoin":"CELO",
-		"decimal":18,
-		"rpc":"https://forno.celo.org",
-		"blockScan":"https://celoscan.io/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0xa4ec",
+		"ID": 42220,
+		"name": "Celo",
+		"fullName": "Celo Mainnet",
+		"nativeCoin": "CELO",
+		"decimal": 18,
+		"rpc": [
+			"https://forno.celo.org"
+		],
+		"blockScan": "https://celoscan.io/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"43114":{
+	"43114": {
 		"en": false,
-		"hexID":"0xa86a",
-		"ID":43114,
-		"name":"Avalance",
-		"fullName":"Avalanche C-Chain",
-		"nativeCoin":"AVAX",
-		"decimal":18,
-		"rpc":"https://avalanche.blockpi.network/v1/rpc/public",
-		"blockScan":"https://snowtrace.io/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0xa86a",
+		"ID": 43114,
+		"name": "Avalance",
+		"fullName": "Avalanche C-Chain",
+		"nativeCoin": "AVAX",
+		"decimal": 18,
+		"rpc": [
+			"https://avalanche.blockpi.network/v1/rpc/public"
+		],
+		"blockScan": "https://snowtrace.io/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	},
-	"59144":{
+	"59144": {
 		"en": true,
-		"hexID":"0xe708",
-		"ID":59144,
-		"name":"Linea",
-		"fullName":"Linea Mainnet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://rpc.linea.build",
-		"blockScan":"https://lineascan.build/",
-		"dca":{
-			"resolver":"0xf6Bc71f9cd6b009cF6EA1F4008ed4151d740362d",
-			"database":"",
-			"NUI":"0x900180c4C7Ad0d44A4Aec4Fda4eD17CF02c34B2c",
-			"NRI":"0x0A612F211EddEc4AbE42a7716EFcC23b83a62A1e"
+		"hexID": "0xe708",
+		"ID": 59144,
+		"name": "Linea",
+		"fullName": "Linea Mainnet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://rpc.linea.build",
+			"https://linea.drpc.org",
+			"https://linea.blockpi.network/v1/rpc/public"
+		],
+		"blockScan": "https://lineascan.build/",
+		"dca": {
+			"resolver": "0xf6Bc71f9cd6b009cF6EA1F4008ed4151d740362d",
+			"database": "",
+			"NUI": "0x900180c4C7Ad0d44A4Aec4Fda4eD17CF02c34B2c",
+			"NRI": "0x0A612F211EddEc4AbE42a7716EFcC23b83a62A1e"
 		}
 	},
-	"534352":{
+	"81457": {
 		"en": true,
-		"hexID":"0x82750",
-		"ID":534352,
-		"name":"Scroll",
-		"fullName":"Scroll Mainet",
-		"nativeCoin":"ETH",
-		"decimal":18,
-		"rpc":"https://scroll.blockpi.network/v1/rpc/public",
-		"blockScan":"https://blockscout.scroll.io/",
-		"dca":{
-			"resolver":"0xc2eA7A1317B53541E12F85696A6614c8675Cd3c0",
-			"database":"",
-			"NUI":"0x14A8F007735d76637C71525d6255cB783c829E92",
-			"NRI":"0x10929a6EA49B41217fbB06779c05c3bDa5507857"
+		"hexID": "0x13e31",
+		"ID": 81457,
+		"name": "Blast",
+		"fullName": "Blast Mainnet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://rpc.blast.io",
+			"https://rpc.ankr.com/blast",
+			"https://blast.blockpi.network/v1/rpc/public"
+		],
+		"blockScan": "https://blastscan.io/",
+		"dca": {
+			"resolver": "0x8488e9BFD06f87E2A80BBc6dc72b8AE2639595d6",
+			"database": "0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
+			"NUI": "0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
+			"NRI": "0x14A8F007735d76637C71525d6255cB783c829E92"
 		}
 	},
-	"245022934":{
+	"534352": {
+		"en": true,
+		"hexID": "0x82750",
+		"ID": 534352,
+		"name": "Scroll",
+		"fullName": "Scroll Mainet",
+		"nativeCoin": "ETH",
+		"decimal": 18,
+		"rpc": [
+			"https://scroll.drpc.org",
+			"https://scroll.drpc.org",
+			"https://rpc.scroll.io"
+		],
+		"blockScan": "https://blockscout.scroll.io/",
+		"dca": {
+			"resolver": "0xc2eA7A1317B53541E12F85696A6614c8675Cd3c0",
+			"database": "",
+			"NUI": "0x14A8F007735d76637C71525d6255cB783c829E92",
+			"NRI": "0x10929a6EA49B41217fbB06779c05c3bDa5507857"
+		}
+	},
+	"245022934": {
 		"en": false,
-		"hexID":"0xe9ac0d6",
-		"ID":245022934,
-		"name":"Neon",
-		"fullName":"Neon EVM Mainnet",
-		"nativeCoin":"NEON",
-		"decimal":18,
-		"rpc":"https://neon-proxy-mainnet.solana.p2p.org",
-		"blockScan":"https://neonscan.org/",
-		"dca":{
-			"resolver":"",
-			"database":"",
-			"NUI":"",
-			"NRI":""
+		"hexID": "0xe9ac0d6",
+		"ID": 245022934,
+		"name": "Neon",
+		"fullName": "Neon EVM Mainnet",
+		"nativeCoin": "NEON",
+		"decimal": 18,
+		"rpc": [
+			"https://neon-proxy-mainnet.solana.p2p.org"
+		],
+		"blockScan": "https://neonscan.org/",
+		"dca": {
+			"resolver": "",
+			"database": "",
+			"NUI": "",
+			"NRI": ""
 		}
 	}
 }
