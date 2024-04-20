@@ -1,461 +1,470 @@
-[
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_NUI",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "_resolver",
-                "type": "address"
-            }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "constructor"
-    },
-    {
-        "inputs": [],
-        "name": "EmergencyPause",
-        "type": "error"
-    },
-    {
-        "inputs": [],
-        "name": "ExecutionNotRequired",
-        "type": "error"
-    },
-    {
-        "inputs": [],
-        "name": "NotAuthorized",
-        "type": "error"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "address",
-                "name": "owner",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "internalType": "bytes32",
-                "name": "identifier",
-                "type": "bytes32"
-            }
-        ],
-        "name": "PositionClosedByError",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "address",
-                "name": "owner",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "internalType": "bytes32",
-                "name": "identifier",
-                "type": "bytes32"
-            }
-        ],
-        "name": "PositionClosedByQueue",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "address",
-                "name": "owner",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "internalType": "bytes32",
-                "name": "identifier",
-                "type": "bytes32"
-            }
-        ],
-        "name": "PositionCompleted",
-        "type": "event"
-    },
-    {
-        "inputs": [],
-        "name": "ADMIN",
-        "outputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "NUI",
-        "outputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "RESOLVER",
-        "outputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "amountExecutablePositions",
-        "outputs": [
-            {
-                "internalType": "uint40",
-                "name": "",
-                "type": "uint40"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "bytes32",
-                "name": "_identifier",
-                "type": "bytes32"
-            },
-            {
-                "internalType": "bytes32",
-                "name": "_identifierLast",
-                "type": "bytes32"
-            }
-        ],
-        "name": "closePosition",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "bytes32",
-                "name": "_identifier",
-                "type": "bytes32"
-            },
-            {
-                "internalType": "uint40",
-                "name": "_nextExecution",
-                "type": "uint40"
-            }
-        ],
-        "name": "createPosition",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "emergencyPause",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint40",
-                "name": "_amountExecutablePositions",
-                "type": "uint40"
-            }
-        ],
-        "name": "executableIds",
-        "outputs": [
-            {
-                "internalType": "uint40[]",
-                "name": "",
-                "type": "uint40[]"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint40[]",
-                "name": "_id",
-                "type": "uint40[]"
-            },
-            {
-                "internalType": "uint40",
-                "name": "_maxDca",
-                "type": "uint40"
-            }
-        ],
-        "name": "executionCompletion",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint40[]",
-                "name": "_id",
-                "type": "uint40[]"
-            }
-        ],
-        "name": "executionStart",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint40[]",
-                "name": "_id",
-                "type": "uint40[]"
-            }
-        ],
-        "name": "executionsDetail",
-        "outputs": [
-            {
-                "components": [
-                    {
-                        "internalType": "bool",
-                        "name": "toBeClosed",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "allowOk",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "balanceOk",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "receiver",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "srcToken",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "dstToken",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "uint8",
-                        "name": "srcDecimals",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "uint8",
-                        "name": "dstDecimals",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "srcAmountTransfered",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "limitOrderBuy",
-                        "type": "uint256"
-                    }
-                ],
-                "internalType": "struct ResolverData[]",
-                "name": "",
-                "type": "tuple[]"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "initMaxDcaExecutable",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "maxDcaExecutable",
-        "outputs": [
-            {
-                "internalType": "uint40",
-                "name": "",
-                "type": "uint40"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "operative",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "bytes32",
-                "name": "_identifier",
-                "type": "bytes32"
-            }
-        ],
-        "name": "positionDetail",
-        "outputs": [
-            {
-                "components": [
-                    {
-                        "internalType": "uint8",
-                        "name": "errCount",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "uint16",
-                        "name": "code",
-                        "type": "uint16"
-                    },
-                    {
-                        "internalType": "uint40",
-                        "name": "dateCreation",
-                        "type": "uint40"
-                    },
-                    {
-                        "internalType": "uint40",
-                        "name": "nextExecution",
-                        "type": "uint40"
-                    },
-                    {
-                        "internalType": "uint40",
-                        "name": "lastExecution",
-                        "type": "uint40"
-                    },
-                    {
-                        "internalType": "uint40",
-                        "name": "exePerformed",
-                        "type": "uint40"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "fundTransfered",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "executionFee",
-                        "type": "uint256"
-                    }
-                ],
-                "internalType": "struct ExeData",
-                "name": "",
-                "type": "tuple"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "resolverRunning",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "snapsExecution",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "bytes32",
-                "name": "_identifier",
-                "type": "bytes32"
-            },
-            {
-                "internalType": "uint8",
-                "name": "_tau",
-                "type": "uint8"
-            }
-        ],
-        "name": "updateExecutionDate",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint40[]",
-                "name": "_id",
-                "type": "uint40[]"
-            },
-            {
-                "internalType": "uint16[]",
-                "name": "_code",
-                "type": "uint16[]"
-            },
-            {
-                "internalType": "uint256[]",
-                "name": "_executionFee",
-                "type": "uint256[]"
-            }
-        ],
-        "name": "updatePositions",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    }
-]
+{
+    "name": "NRI",
+    "chainId": 534352,
+    "address": "0x10929a6EA49B41217fbB06779c05c3bDa5507857",
+    "args": [
+        "0x14A8F007735d76637C71525d6255cB783c829E92",
+        "0xc2eA7A1317B53541E12F85696A6614c8675Cd3c0"
+    ],
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_NUI",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_resolver",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [],
+            "name": "EmergencyPause",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "ExecutionNotRequired",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "NotAuthorized",
+            "type": "error"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "bytes32",
+                    "name": "identifier",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "PositionClosedByError",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "bytes32",
+                    "name": "identifier",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "PositionClosedByQueue",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "bytes32",
+                    "name": "identifier",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "PositionCompleted",
+            "type": "event"
+        },
+        {
+            "inputs": [],
+            "name": "ADMIN",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "NUI",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "RESOLVER",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "amountExecutablePositions",
+            "outputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "",
+                    "type": "uint40"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifierLast",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "closePosition",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "uint40",
+                    "name": "_nextExecution",
+                    "type": "uint40"
+                }
+            ],
+            "name": "createPosition",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "emergencyPause",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "_amountExecutablePositions",
+                    "type": "uint40"
+                }
+            ],
+            "name": "executableIds",
+            "outputs": [
+                {
+                    "internalType": "uint40[]",
+                    "name": "",
+                    "type": "uint40[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint40[]",
+                    "name": "_id",
+                    "type": "uint40[]"
+                },
+                {
+                    "internalType": "uint40",
+                    "name": "_maxDca",
+                    "type": "uint40"
+                }
+            ],
+            "name": "executionCompletion",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint40[]",
+                    "name": "_id",
+                    "type": "uint40[]"
+                }
+            ],
+            "name": "executionStart",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint40[]",
+                    "name": "_id",
+                    "type": "uint40[]"
+                }
+            ],
+            "name": "executionsDetail",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "bool",
+                            "name": "toBeClosed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "allowOk",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "balanceOk",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "receiver",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "srcToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "dstToken",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint8",
+                            "name": "srcDecimals",
+                            "type": "uint8"
+                        },
+                        {
+                            "internalType": "uint8",
+                            "name": "dstDecimals",
+                            "type": "uint8"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "srcAmountTransfered",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "limitOrderBuy",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct ResolverData[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "initMaxDcaExecutable",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "maxDcaExecutable",
+            "outputs": [
+                {
+                    "internalType": "uint40",
+                    "name": "",
+                    "type": "uint40"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "operative",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "positionDetail",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint8",
+                            "name": "errCount",
+                            "type": "uint8"
+                        },
+                        {
+                            "internalType": "uint16",
+                            "name": "code",
+                            "type": "uint16"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "dateCreation",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "nextExecution",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "lastExecution",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint40",
+                            "name": "exePerformed",
+                            "type": "uint40"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "fundTransfered",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "executionFee",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct ExeData",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "resolverRunning",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "snapsExecution",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_identifier",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "uint8",
+                    "name": "_tau",
+                    "type": "uint8"
+                }
+            ],
+            "name": "updateExecutionDate",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint40[]",
+                    "name": "_id",
+                    "type": "uint40[]"
+                },
+                {
+                    "internalType": "uint16[]",
+                    "name": "_code",
+                    "type": "uint16[]"
+                },
+                {
+                    "internalType": "uint256[]",
+                    "name": "_executionFee",
+                    "type": "uint256[]"
+                }
+            ],
+            "name": "updatePositions",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}
