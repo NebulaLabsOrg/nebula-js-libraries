@@ -1,7 +1,7 @@
 {
   "name": "xy",
   "version": "1.0",
-  "description": "",
+  "description": "XY Aggregator to perform swap",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -10,8 +10,8 @@
     "clean": "npm cache clean --force"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Nebula Labs",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.6.8",
     "ethers": "^5.7.2",
