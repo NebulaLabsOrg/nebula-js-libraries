@@ -3,11 +3,10 @@
     "400": "Insufficient approved token",
     "401": "Insufficient balance",
     "402": "Limit order not reached",
-    "403": "Network not responding",
-    "404": "APIs Error",
+    "403": "API Request error",
+    "404": "Missing Aggregator Route",
     "405": "Built Data Error",
     "406": "Tx Reverted by Blockchain",
-    "407": "Source amount value too low",
-    "408": "Insufficient balance across multiple DCAs",
+    "407": "Insufficient balance across multiple DCAs",
     "999": "Manual Refund will follow"
 }
