@@ -13,11 +13,6 @@ let swapData = {
     dstAmount: "nd",
     dstValue: "0"
 }
-let resApprove = {
-    code: 0,
-    message: "",
-    hash: ""
-}
 
 /*
     _chainId --> Integer,

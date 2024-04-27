@@ -1,4 +1,3 @@
-import Web3 from "web3";
 export function axiosErrorHandler(_error) {
     let msg = {
         code: 0,
