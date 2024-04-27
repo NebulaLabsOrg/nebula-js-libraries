@@ -60,7 +60,7 @@ export function xySwapHandler(_response) {
     }
 }
 
-export function generateUrl(methodName, queryParams) {
+export function generateGetUrl(methodName, queryParams) {
     return methodName + '?' + (new URLSearchParams(queryParams)).toString();
 }
 

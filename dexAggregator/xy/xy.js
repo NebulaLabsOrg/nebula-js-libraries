@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import ethers from "ethers";
 import { instance } from "./src/config.js";
-import { axiosErrorHandler, xyRouteHandler, xySwapHandler, generateUrl, signAndSendTransaction } from "./src/utils.js";
+import { axiosErrorHandler, xyRouteHandler, xySwapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 
 
@@ -30,7 +30,7 @@ async function getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken){
         dstQuoteTokenAddress: _dstToken,
         slippage: _slippage
     }
-    const url = generateUrl("/quote", params);
+    const url = generateGetUrl("/quote", params);
     let code, message, data;
 
     await instance.get(url)
@@ -90,7 +90,7 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
         srcSwapProvider: route.data.srcSwapDescription != undefined ? route.data.srcSwapDescription.provider : "",
         dstSwapProvider: route.data.dstSwapDescription != undefined ? route.data.dstSwapDescription.provider : "",
     }
-    const url = generateUrl("/buildTx", params);
+    const url = generateGetUrl("/buildTx", params);
     //Build Tx
     await instance.get(url)
     .then(async function (response) {
