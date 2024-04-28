@@ -45,18 +45,18 @@ export function axiosErrorHandler(_error) {
 }
 
 export function xyRouteHandler(_response) {
-    if(_response.data.success){
-        return {code: 200, message: "success", data: _response.data.routes[0]}
-    }else{
-        return {code: 404, message: _response.data.errorMsg, data: null}
+    if (_response.data.success) {
+        return { code: 200, message: "success", data: _response.data.routes[0] }
+    } else {
+        return { code: 404, message: _response.data.errorMsg, data: null }
     }
 }
 
 export function xySwapHandler(_response) {
-    if(_response.data.success){
-        return {code: 200, message: "success", data: _response.data}
-    }else{
-        return {code: 405, message: _response.data.errorMsg, data: null}
+    if (_response.data.success) {
+        return { code: 200, message: "success", data: _response.data }
+    } else {
+        return { code: 405, message: _response.data.errorMsg, data: null }
     }
 }
 
@@ -65,6 +65,6 @@ export function generateGetUrl(methodName, queryParams) {
 }
 
 export async function signAndSendTransaction(_web3, _prvKey, _tx) {
-    const {rawTransaction} = await _web3.eth.accounts.signTransaction(_tx, _prvKey);
+    const { rawTransaction } = await _web3.eth.accounts.signTransaction(_tx, _prvKey);
     return await _web3.eth.sendSignedTransaction(rawTransaction)
 }
