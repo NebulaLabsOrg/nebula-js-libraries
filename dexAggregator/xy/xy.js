@@ -22,7 +22,7 @@ let swapData = {
     _dstToken --> String
 */
 async function getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken) {
-    const params = {
+    let params = {
         srcChainId: _chainId,
         srcQuoteTokenAddress: _srcToken,
         srcQuoteTokenAmount: _srcAmount.toString(),
@@ -79,7 +79,7 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
         return swapData;
     }
     //Swap
-    const params = {
+    let params = {
         srcChainId: _chainId,
         srcQuoteTokenAddress: _srcToken,
         srcQuoteTokenAmount: _srcAmount.toString(),
@@ -125,7 +125,6 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
                         })
                 })
                 .catch(function (error) {
-                    console.log(error)
                     swapData.code = 406;
                     swapData.message = error.message;
                     swapData.approvalHash = resApprove.hash;
