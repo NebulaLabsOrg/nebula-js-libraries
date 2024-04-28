@@ -44,27 +44,34 @@ export function axiosErrorHandler(_error) {
     return msg
 }
 
-export function xyRouteHandler(_response) {
-    if(_response.data.success){
-        return {code: 200, message: "success", data: _response.data.routes[0]}
-    }else{
-        return {code: 404, message: _response.data.errorMsg, data: null}
-    }
-}
-
-export function xySwapHandler(_response) {
-    if(_response.data.success){
-        return {code: 200, message: "success", data: _response.data}
-    }else{
-        return {code: 405, message: _response.data.errorMsg, data: null}
-    }
-}
-
 export function generateGetUrl(methodName, queryParams) {
     return methodName + '?' + (new URLSearchParams(queryParams)).toString();
 }
 
-export async function signAndSendTransaction(_web3, _prvKey, _tx) {
-    const {rawTransaction} = await _web3.eth.accounts.signTransaction(_tx, _prvKey);
-    return await _web3.eth.sendSignedTransaction(rawTransaction)
+export function defillamaChainDecode(_chainID){
+    let code = 200;
+    let name = ""
+    switch(Number(_chainID)) {
+        case 1:         name="ethereum";       break;
+        case 10:        name="optimism";       break;
+        case 25:        name="cronos";         break;
+        case 56:        name="bsc";            break;
+        case 100:       name="gnosis";         break;
+        case 137:       name="polygon";        break;
+        case 250:       name="fantom";         break;
+        case 324:       name="era";            break;
+        case 1101:      name="polygon_zkevm";  break;
+        case 1285:      name="moonriver";      break;
+        case 5000:      name="mantle";         break;
+        case 8453:      name="base";           break;
+        case 42161:     name="arbitrum";       break;
+        case 42220:     name="celo";           break;
+        case 43114:     name="avax";           break;
+        case 59144:     name="linea";          break;
+        case 81457:     name="blast";          break;
+        case 534352:    name="scroll";         break;
+        case 245022934: name="neon_evm";       break;
+        default:        name="ethereum"; code=403;     break;
+    }
+    return {code: code, name: name}
 }

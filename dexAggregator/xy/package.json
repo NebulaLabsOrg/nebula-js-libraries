@@ -1,15 +1,14 @@
 {
   "name": "xy",
   "version": "1.0",
-  "description": "XY Aggregator to perform swap",
-  "main": "index.js",
+  "description": "XY Aggregator for swap",
+  "main": "xy.js",
   "type": "module",
   "scripts": {
     "test:route": "node -r dotenv/config ./test/route.js",
     "test:swap": "node -r dotenv/config ./test/swap.js",
     "clean": "npm cache clean --force"
   },
-  "keywords": [],
   "author": "Nebula Labs",
   "license": "MIT",
   "dependencies": {
