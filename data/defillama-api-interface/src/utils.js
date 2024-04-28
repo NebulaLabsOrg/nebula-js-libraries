@@ -64,6 +64,7 @@ export function defillamaChainDecode(_chainID) {
         case 1285: name = "moonriver"; break;
         case 5000: name = "mantle"; break;
         case 8453: name = "base"; break;
+        case 34443: name = "mode"; break;
         case 42161: name = "arbitrum"; break;
         case 42220: name = "celo"; break;
         case 43114: name = "avax"; break;
