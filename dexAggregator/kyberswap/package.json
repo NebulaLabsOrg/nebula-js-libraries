@@ -1,0 +1,22 @@
+{
+  "name": "kyberswap",
+  "version": "1.0",
+  "description": "Kyberswap Aggregator for swap",
+  "main": "kyberswap.js",
+  "type": "module",
+  "scripts": {
+    "test:route": "node -r dotenv/config ./test/route.js",
+    "test:swap": "node -r dotenv/config ./test/swap.js",
+    "clean": "npm cache clean --force"
+  },
+  "author": "Nebula Labs",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "ethers": "^5.7.2",
+    "web3": "^4.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

@@ -140,7 +140,6 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
 }
 /*
     _rpc --> String,
-    _rpc --> String
     _token --> String,
     _amount --> BN in wei (etherjs),
     _spender --> String,
