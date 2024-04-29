@@ -79,6 +79,7 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
         return swapData;
     }
     //Swap
+    const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
     let params = {
         srcChainId: _chainId,
         srcQuoteTokenAddress: _srcToken,
@@ -87,6 +88,7 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
         dstQuoteTokenAddress: _dstToken,
         slippage: _slippage,
         receiver: _receiver,
+        affiliate: signer.address,
         srcSwapProvider: route.data.srcSwapDescription != undefined ? route.data.srcSwapDescription.provider : "",
         dstSwapProvider: route.data.dstSwapDescription != undefined ? route.data.dstSwapDescription.provider : "",
     }
@@ -98,7 +100,6 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
             let res = xySwapHandler(response);
             swapData.code = res.code;
             swapData.message = res.message;
-            const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
             //Calculate Gas Limit
             let gasLimit = await web3.eth.estimateGas({ from: signer.address, to: res.data.tx.to, data: res.data.tx.data })
                 .catch(function (error) {
