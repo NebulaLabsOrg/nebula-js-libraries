@@ -1,0 +1,12 @@
+{
+    "1": "https://api.0x.org",
+    "11155111": "https://sepolia.api.0x.org",
+    "137": "https://polygon.api.0x.org",
+    "56": "https://bsc.api.0x.org",
+    "10": "https://optimism.api.0x.org",
+    "250": "https://fantom.api.0x.org",
+    "42220": "https://celo.api.0x.org",
+    "43114": "https://avalanche.api.0x.org",
+    "42161": "https://arbitrum.api.0x.org",
+    "8453": "https://base.api.0x.org"
+}
