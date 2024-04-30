@@ -14,7 +14,7 @@ export function axiosErrorHandler(_error) {
         msg.msg = {
             error: 'The request was made and the server responded with a status code',
             responce: {
-                data: _error.response.data,
+                data: JSON.stringify(_error.response.data),
                 status: _error.response.status,
                 headers: _error.response.headers
             },
