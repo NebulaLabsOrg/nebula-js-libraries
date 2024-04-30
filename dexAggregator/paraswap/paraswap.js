@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import ethers from "ethers";
 import { instance } from "./src/config.js";
-import { axiosErrorHandler, paraswapRouteHandler, paraswapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
+import { axiosErrorHandler, paraswapRouteHandler, paraswapSwapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 
 
@@ -104,7 +104,7 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcDecimals,
     await instance.post(url, params)
         .then(async function (response) {
             // handle success
-            let res = paraswapHandler(response);
+            let res = paraswapSwapHandler(response);
             swapData.code = res.code;
             swapData.message = res.message;
             //Calculate Gas Limit

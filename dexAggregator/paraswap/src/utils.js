@@ -52,7 +52,7 @@ export function paraswapRouteHandler(_response) {
     }
 }
 
-export function paraswapHandler(_response) {
+export function paraswapSwapHandler(_response) {
     if (!_response.data.error) {
         return { code: 200, message: "success", data: _response.data }
     } else {
