@@ -10,6 +10,7 @@ let swapData = {
     message: "",
     approvalHash: "nd",
     swapHash: "nd",
+    transferHash: "nd",
     dstAmount: "nd",
     dstValue: "0"
 }
@@ -120,6 +121,13 @@ async function swap(_apiKey, _rpc, _prvKey, _chainId, _slippage, _srcToken, _src
                         .catch(function (error) {
                             swapData.codemessage = error.message;
                         })
+                    //Transfer
+                    let resTransf = await transfer(_rpc, _prvKey, _dstToken, route.data.buyAmount, _receiver, _gasPrice, _numberConfirmation);
+                    swapData.transferHash = resTransf.hash;
+                    if (resTransf.code != 200) {
+                        swapData.code = resTransf.code;
+                        swapData.message = resTransf.message;
+                    }
                 })
                 .catch(function (error) {
                     swapData.code = 406;
@@ -148,6 +156,37 @@ async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _num
     const contract = new ethers.Contract(_token, ERC20, signer);
     let code, message, hash;
     await contract.approve(_spender, _amount, {
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei")
+    })
+        .then(async function (tx) {
+            code = 200;
+            message = "success";
+            hash = tx.hash;
+            await tx.wait(parseInt(_numberConfirmation))
+                .catch(function (error) {
+                    message = error.message;
+                })
+        })
+        .catch(function (error) {
+            code = 406;
+            message = error.message;
+            hash = "nd";
+        });
+    return { code: code, message: message, hash: hash }
+}
+/*
+    _rpc --> String,
+    _token --> String,
+    _amount --> BN in wei (etherjs),
+    _to --> String,
+    _gasPrice --> String Gwei,
+    _numberConfirmation --> Integer
+*/
+async function transfer(_rpc, _prvKey, _token, _amount, _to, _gasPrice, _numberConfirmation) {
+    const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
+    const contract = new ethers.Contract(_token, ERC20, signer);
+    let code, message, hash;
+    await contract.transfer(_to, _amount, {
         gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei")
     })
         .then(async function (tx) {
