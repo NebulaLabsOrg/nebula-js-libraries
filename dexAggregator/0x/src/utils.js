@@ -44,20 +44,12 @@ export function axiosErrorHandler(_error) {
     return msg
 }
 
-export function xyRouteHandler(_response) {
-    if (_response.data.success) {
-        return { code: 200, message: "success", data: _response.data.routes[0] }
-    } else {
-        return { code: 404, message: _response.data.errorMsg, data: null }
-    }
+export function zeroXRouteHandler(_response) {
+    return { code: 200, message: "success", data: _response.data }
 }
 
-export function xySwapHandler(_response) {
-    if (_response.data.success) {
-        return { code: 200, message: "success", data: _response.data }
-    } else {
-        return { code: 405, message: _response.data.errorMsg, data: null }
-    }
+export function zeroXSwapHandler(_response) {
+    return { code: 200, message: "success", data: _response.data }
 }
 
 export function generateGetUrl(methodName, queryParams) {

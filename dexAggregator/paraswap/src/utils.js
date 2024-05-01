@@ -44,19 +44,19 @@ export function axiosErrorHandler(_error) {
     return msg
 }
 
-export function xyRouteHandler(_response) {
-    if (_response.data.success) {
-        return { code: 200, message: "success", data: _response.data.routes[0] }
+export function paraswapRouteHandler(_response) {
+    if (!_response.data.error) {
+        return { code: 200, message: "success", data: _response.data.priceRoute }
     } else {
-        return { code: 404, message: _response.data.errorMsg, data: null }
+        return { code: 404, message: _response.data.error, data: null }
     }
 }
 
-export function xySwapHandler(_response) {
-    if (_response.data.success) {
+export function paraswapSwapHandler(_response) {
+    if (!_response.data.error) {
         return { code: 200, message: "success", data: _response.data }
     } else {
-        return { code: 405, message: _response.data.errorMsg, data: null }
+        return { code: 405, message: _response.data.error, data: null }
     }
 }
 

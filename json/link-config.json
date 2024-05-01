@@ -1,0 +1,65 @@
+{
+    "git":{
+        "neon": {
+            "name": "Neon",
+            "url": ""
+        },
+        "nebulas": {
+            "name": "NebulaLabs",
+            "url": ""
+        }
+    },
+    "gitbook": {
+        "neon": {
+            "name": "Neon",
+            "url": {
+                "home":"",
+                "howTo":""
+            }
+        },
+        "nebulas": {
+            "name": "NebulaLabs",
+            "url": ""
+        }
+    },
+    "telegram": {
+        "neon": {
+            "name": "Neon",
+            "url": "https://t.me/NEONprotocolDCA"
+        },
+        "nebulas": {
+            "name": "NebulaLabs",
+            "url": "/"
+        }
+    },
+    "discord": {
+        "neon": {
+            "name": "Neon",
+            "url": "/"
+        },
+        "nebulas": {
+            "name": "NebulaLabs",
+            "url": "/"
+        }
+    },
+    "twitter": {
+        "neon": {
+            "name": "Neon",
+            "url": "https://twitter.com/NEONprotocolio"
+        },
+        "nebulas": {
+            "name": "NebulaLabs",
+            "url": "https://twitter.com/NebulaLabsOrg"
+        }
+    },
+    "reportIssue": {
+        "neon": {
+            "name": "Neon",
+            "url": "/"
+        },
+        "nebulas": {
+            "name": "NebulaLabs",
+            "url": "/"
+        }
+    }
+}

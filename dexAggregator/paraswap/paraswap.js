@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import ethers from "ethers";
 import { instance } from "./src/config.js";
-import { axiosErrorHandler, xyRouteHandler, xySwapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
+import { axiosErrorHandler, paraswapRouteHandler, paraswapSwapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 
 
@@ -16,27 +16,30 @@ let swapData = {
 
 /*
     _chainId --> Integer,
-    _slippage --> Number,
     _srcToken --> String,
+    _srcDecimals --> Integer,
     _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String
+    _dstToken --> String,
+    _dstDecimals --> Integer
 */
-async function getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken) {
+async function getRoute(_chainId, _srcToken, _srcDecimals, _srcAmount, _dstToken, _dstDecimals) {
     let params = {
-        srcChainId: _chainId,
-        srcQuoteTokenAddress: _srcToken,
-        srcQuoteTokenAmount: _srcAmount.toString(),
-        dstChainId: _chainId,
-        dstQuoteTokenAddress: _dstToken,
-        slippage: _slippage
+        srcToken: _srcToken,
+        srcDecimals: _srcDecimals,
+        destToken: _dstToken,
+        destDecimals: _dstDecimals,
+        amount: _srcAmount.toString(),
+        side: "SELL",
+        network: String(_chainId),
+        partner: "NeonProtocol"
     }
-    const url = generateGetUrl("/quote", params);
+    const url = generateGetUrl("/prices", params);
     let code, message, data;
 
     await instance.get(url)
         .then(function (response) {
             // handle success
-            let res = xyRouteHandler(response);
+            let res = paraswapRouteHandler(response);
             code = res.code;
             message = res.message;
             data = res.data;
@@ -55,24 +58,26 @@ async function getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken) {
     _chainId --> Integer,
     _slippage --> Number,
     _srcToken --> String,
+    _srcDecimals --> Integer,
     _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String
+    _dstToken --> String,
+    _dstDecimals --> Integer,
     _reciever --> String,
     _gasPrice --> String gwei,
     _numberConfirmation --> Integer
     _delayForCheckTx --> Integer ms
 */
-async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _dstToken, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
+async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcDecimals, _srcAmount, _dstToken, _dstDecimals, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
     const web3 = new Web3(_rpc);
     //GetRoute
-    let route = await getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken);
+    let route = await getRoute(_chainId, _srcToken, _srcDecimals, _srcAmount, _dstToken, _dstDecimals);
     if (route.code != 200) {
         swapData.code = route.code;
         swapData.message = route.message;
         return swapData;
     }
     //Approval
-    let resApprove = await approve(_rpc, _prvKey, _srcToken, _srcAmount, route.data.contractAddress, _gasPrice, _numberConfirmation)
+    let resApprove = await approve(_rpc, _prvKey, _srcToken, _srcAmount, route.data.tokenTransferProxy, _gasPrice, _numberConfirmation)
     if (resApprove.code != 200) {
         swapData.code = resApprove.code;
         swapData.message = resApprove.message;
@@ -81,35 +86,37 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
     //Swap
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
     let params = {
-        srcChainId: _chainId,
-        srcQuoteTokenAddress: _srcToken,
-        srcQuoteTokenAmount: _srcAmount.toString(),
-        dstChainId: _chainId,
-        dstQuoteTokenAddress: _dstToken,
-        slippage: _slippage,
+        srcToken: _srcToken,
+        srcDecimals: _srcDecimals,
+        destToken: _dstToken,
+        destDecimals: _dstDecimals,
+        srcAmount: _srcAmount.toString(),
+        priceRoute: route.data,
+        slippage: _slippage * 100, //0.5 -> 50
+        userAddress: signer.address,
         receiver: _receiver,
-        affiliate: signer.address,
-        srcSwapProvider: route.data.srcSwapDescription != undefined ? route.data.srcSwapDescription.provider : "",
-        dstSwapProvider: route.data.dstSwapDescription != undefined ? route.data.dstSwapDescription.provider : "",
+        partnerAddress: signer.address,
+        partner: "NeonProtocol",
+        takeSurplus: true
     }
-    const url = generateGetUrl("/buildTx", params);
+    const url = `/transactions/${_chainId}`
     //Build Tx
-    await instance.get(url)
+    await instance.post(url, params)
         .then(async function (response) {
             // handle success
-            let res = xySwapHandler(response);
+            let res = paraswapSwapHandler(response);
             swapData.code = res.code;
             swapData.message = res.message;
             //Calculate Gas Limit
-            let gasLimit = await web3.eth.estimateGas({ from: signer.address, to: res.data.tx.to, data: res.data.tx.data })
+            let gasLimit = await web3.eth.estimateGas({ from: signer.address, to: res.data.to, data: res.data.data })
                 .catch(function (error) {
                     swapData.message = error.message;
                 })
             //Send Tx
             const swapTx = {
                 from: signer.address,
-                to: res.data.tx.to,
-                data: res.data.tx.data,
+                to: res.data.to,
+                data: res.data.data,
                 gasLimit: gasLimit,
                 gasPrice: web3.utils.toWei(_gasPrice, 'gwei')
             }
@@ -117,8 +124,8 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
                 .then(async function (tx) {
                     swapData.swapHash = tx.transactionHash;
                     swapData.approvalHash = resApprove.hash;
-                    swapData.dstAmount = res.data.route.dstQuoteTokenAmount;
-                    swapData.dstValue = res.data.route.dstQuoteTokenUsdValue;
+                    swapData.dstAmount = route.data.destAmount;
+                    swapData.dstValue = route.data.destUSD;
                     await new Promise(resolve => setTimeout(resolve, _delayForCheckTx));
                     await web3.eth.getTransactionReceipt(tx.transactionHash)
                         .catch(function (error) {
@@ -171,8 +178,8 @@ async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _num
     return { code: code, message: message, hash: hash }
 }
 
-const XY = {
+const paraswap = {
     getRoute,
     swap
 }
-export default XY;
+export default paraswap;

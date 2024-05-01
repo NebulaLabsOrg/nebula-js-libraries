@@ -1,0 +1,22 @@
+{
+  "name": "0x",
+  "version": "1.0",
+  "description": "0x Aggregator for swap",
+  "main": "0x.js",
+  "type": "module",
+  "scripts": {
+    "test:route": "node -r dotenv/config ./test/route.js",
+    "test:swap": "node -r dotenv/config ./test/swap.js",
+    "clean": "npm cache clean --force"
+  },
+  "author": "Nebula Labs",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "ethers": "^5.7.2",
+    "web3": "^4.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
