@@ -196,6 +196,38 @@
         "inputs": [
             {
                 "internalType": "uint40",
+                "name": "",
+                "type": "uint40"
+            }
+        ],
+        "name": "positionPerExecution",
+        "outputs": [
+            {
+                "internalType": "uint40",
+                "name": "",
+                "type": "uint40"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "protocolAllTimeDcas",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint40",
                 "name": "_length",
                 "type": "uint40"
             }
@@ -229,6 +261,24 @@
             }
         ],
         "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint40",
+                "name": "_timeToDelete",
+                "type": "uint40"
+            },
+            {
+                "internalType": "uint40",
+                "name": "_timeToUpdate",
+                "type": "uint40"
+            }
+        ],
+        "name": "updatePositionPerExecution",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -337,11 +387,6 @@
                     {
                         "internalType": "uint256",
                         "name": "srcAmount",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "executionFee",
                         "type": "uint256"
                     },
                     {

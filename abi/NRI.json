@@ -142,6 +142,25 @@
     {
         "inputs": [
             {
+                "internalType": "uint40",
+                "name": "_id",
+                "type": "uint40"
+            }
+        ],
+        "name": "amountTransfered",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
                 "internalType": "bytes32",
                 "name": "_identifier",
                 "type": "bytes32"
@@ -286,7 +305,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "srcAmountTransfered",
+                        "name": "srcAmount",
                         "type": "uint256"
                     },
                     {
@@ -380,12 +399,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "fundTransfered",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "executionFee",
+                        "name": "fundTransferred",
                         "type": "uint256"
                     }
                 ],
@@ -446,11 +460,6 @@
                 "internalType": "uint16[]",
                 "name": "_code",
                 "type": "uint16[]"
-            },
-            {
-                "internalType": "uint256[]",
-                "name": "_executionFee",
-                "type": "uint256[]"
             }
         ],
         "name": "updatePositions",
