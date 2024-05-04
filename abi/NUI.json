@@ -213,7 +213,7 @@
     },
     {
         "inputs": [],
-        "name": "protocolAllTimeDcas",
+        "name": "protocolAllTimeDCAs",
         "outputs": [
             {
                 "internalType": "uint256",
