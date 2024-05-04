@@ -8,5 +8,6 @@
     "405": "Built Data Error",
     "406": "Tx Reverted by Blockchain",
     "407": "Insufficient balance across multiple DCAs",
+    "408": "Request closure by user",
     "999": "Manual Refund will follow"
 }
