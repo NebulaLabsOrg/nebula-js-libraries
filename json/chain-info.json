@@ -13,7 +13,7 @@
 		"blockScan": "https://sepolia.etherscan.io/",
 		"dca": {
 			"resolver": "",
-			"NDB": "0xC5974B1f06deC27160430eDd558C19400700d044",
+			"NDB": "0x0722205F3a5408a992501a2e4Fab27E855ed0dBd",
 			"NUI": "0xdF91885DF2f8dB33DCCB64eCcCB5Fccb0DE09fA0",
 			"NRI": "0x7CD899660bf0E63D8981bF17CdA533aE622518d7"
 		}
@@ -150,7 +150,7 @@
 		"blockScan": "https://ftmscan.com/",
 		"dca": {
 			"resolver": "",
-			"NDB": "0x9D87Bbb0Ce4387DAe4582e34880111D8b38Ee4A1",
+			"NDB": "0x06cF77173D920E3997291427362a493621199F1E",
 			"NUI": "",
 			"NRI": ""
 		}
