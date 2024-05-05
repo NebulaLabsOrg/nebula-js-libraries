@@ -1,0 +1,38 @@
+{
+	"11155111": {
+		"name": "Sepolia",
+        "token":[]
+	},
+	"56": {
+		"name": "Binance",
+        "token":[]
+	},
+	"324": {
+		"name": "zkSync Era",
+        "token":[]
+	},
+	"5000": {
+		"name": "Mantle",
+        "token":[]
+	},
+	"8453": {
+		"name": "Base",
+        "token":[]
+	},
+	"42161": {
+		"name": "Arbitrum",
+        "token":[]
+	},
+	"59144": {
+		"name": "Linea",
+        "token":[]
+	},
+	"81457": {
+		"name": "Blast",
+        "token":[]
+	},
+	"534352": {
+        "name": "Scroll",
+        "token":[]
+    }
+}
