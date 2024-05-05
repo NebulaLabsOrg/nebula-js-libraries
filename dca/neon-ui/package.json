@@ -1,0 +1,30 @@
+{
+  "name": "neon-ui",
+  "version": "1.0",
+  "description": "Neon Dca library for User Interface",
+  "main": "neon-ui.js",
+  "type": "module",
+  "scripts": {
+    "test:allowance": "node -r dotenv/config ./test/allowance.js",
+    "test:positionAvailable": "node -r dotenv/config ./test/positionAvailable.js",
+    "test:approve": "node -r dotenv/config ./test/approve.js",
+    "test:createDca": "node -r dotenv/config ./test/createDCA.js",
+    "test:userTotalDca": "node -r dotenv/config ./test/userTotalDCA.js",
+    "test:userTotalQueue": "node -r dotenv/config ./test/userTotalQueue.js",
+    "test:getAllUserDca": "node -r dotenv/config ./test/getAllUserDca.js",
+    "test:getAllUserQueuedDca": "node -r dotenv/config ./test/getAllUserQueuedDca.js",
+    "test:getDcaDetail": "node -r dotenv/config ./test/getDcaDetail.js",
+    "test:getDcaExecutionData": "node -r dotenv/config ./test/getDcaExecutionData.js",
+    "test:skipNextExecution": "node -r dotenv/config ./test/skipNextExecution.js",
+    "test:closeDCA": "node -r dotenv/config ./test/closeDCA.js",
+    "clean": "npm cache clean --force"
+  },
+  "author": "Nebula Labs",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
