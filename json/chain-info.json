@@ -8,14 +8,15 @@
 		"nativeCoin": "ETH",
 		"decimal": 18,
 		"rpc": [
-			"https://rpc2.sepolia.org"
+			"https://rpc2.sepolia.org",
+			"https://gateway.tenderly.co/public/sepolia"
 		],
 		"blockScan": "https://sepolia.etherscan.io/",
 		"dca": {
 			"resolver": "",
-			"NDB": "0x0722205F3a5408a992501a2e4Fab27E855ed0dBd",
-			"NUI": "0xdF91885DF2f8dB33DCCB64eCcCB5Fccb0DE09fA0",
-			"NRI": "0x7CD899660bf0E63D8981bF17CdA533aE622518d7"
+			"NDB": "0x14DbCD3c2CD3f455C07B7be8F4076BCbB98C1B58",
+			"NUI": "0x652d355b2d5c808784D3C785e4c5056b7aDB7f1B",
+			"NRI": "0xC2115b52561d0F82F1CB5bF3222Aa21f0992603A"
 		}
 	},
 	"1": {
