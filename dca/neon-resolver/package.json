@@ -1,0 +1,28 @@
+{
+  "name": "neon-resolver",
+  "version": "1.0",
+  "description": "Neon Dca library for resolver",
+  "main": "neon-resolver.js",
+  "type": "module",
+  "scripts": {
+    "test:amountExecutablePosition": "node -r dotenv/config ./test/amountExecutablePosition.js",
+    "test:executableIds": "node -r dotenv/config ./test/executableIds.js",
+    "test:executionsDetail": "node -r dotenv/config ./test/executionsDetail.js",
+    "test:amountTransfered": "node -r dotenv/config ./test/amountTransfered.js",
+    "test:addAmountProcessed": "node -r dotenv/config ./test/addAmountProcessed.js",
+    "test:storeExecutionData": "node -r dotenv/config ./test/storeExecutionData.js",
+    "test:snapsExecution": "node -r dotenv/config ./test/snapsExecution.js",
+    "test:executionStart": "node -r dotenv/config ./test/executionStart.js",
+    "test:updatePositions": "node -r dotenv/config ./test/updatePositions.js",
+    "test:executionCompletion": "node -r dotenv/config ./test/executionCompletion.js",
+    "clean": "npm cache clean --force"
+  },
+  "author": "Nebula Labs",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
