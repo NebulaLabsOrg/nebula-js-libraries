@@ -1,0 +1,22 @@
+{
+  "name": "erc20",
+  "version": "1.0",
+  "description": "ERC20 Library",
+  "main": "erc20.js",
+  "type": "module",
+  "scripts": {
+    "test:decimals": "node -r dotenv/config ./test/decimals.js",
+    "test:balanceOf": "node -r dotenv/config ./test/balanceOf.js",
+    "test:allowance": "node -r dotenv/config ./test/allowance.js",
+    "test:approve": "node -r dotenv/config ./test/approve.js",
+    "clean": "npm cache clean --force"
+  },
+  "author": "Nebula Labs",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
