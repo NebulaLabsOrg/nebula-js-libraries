@@ -1,38 +1,56 @@
 {
 	"11155111": {
 		"name": "Sepolia",
-        "token":[]
+        "token":[
+			{"label": "USDC", "address": "0x01", "img": "USDC", "description": "USDC"}
+		]
 	},
 	"56": {
 		"name": "Binance",
-        "token":[]
+        "token":[
+			{"label": "axlUSDC", "address": "0x4268b8f0b87b6eae5d897996e6b845ddbd99adf3", "img": "axlUSDC", "description": "Axelar Bridged USDC"}
+		]
 	},
 	"324": {
 		"name": "zkSync Era",
-        "token":[]
+        "token":[
+			{"label": "USDC", "address": "0x1d17cbcf0d6d143135ae902365d2e5e2a16538d4", "img": "USDC", "description": "USDC"}
+		]
 	},
 	"5000": {
 		"name": "Mantle",
-        "token":[]
+        "token":[
+			{"label": "WETH", "address": "0x4200000000000000000000000000000000000006", "img": "WETH", "description": "Wrapped ETH"}
+		]
 	},
 	"8453": {
 		"name": "Base",
-        "token":[]
+        "token":[
+			{"label": "USDC", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "img": "USDC", "description": "USDC"}
+		]
 	},
 	"42161": {
 		"name": "Arbitrum",
-        "token":[]
+        "token":[
+			{"label": "USDC", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "img": "USDC", "description": "USDC"}
+		]
 	},
 	"59144": {
 		"name": "Linea",
-        "token":[]
+        "token":[
+			{"label": "WETH", "address": "0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f", "img": "WETH", "description": "Wrapped ETH"}
+		]
 	},
 	"81457": {
 		"name": "Blast",
-        "token":[]
+        "token":[
+			{"label": "WETH", "address": "0x4300000000000000000000000000000000000004", "img": "WETH", "description": "Wrapped ETH"}
+		]
 	},
 	"534352": {
         "name": "Scroll",
-        "token":[]
+        "token":[
+			{"label": "WETH", "address": "0x5300000000000000000000000000000000000004", "img": "WETH", "description": "Wrapped ETH"}
+		]
     }
 }
