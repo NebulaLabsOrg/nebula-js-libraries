@@ -1,5 +1,5 @@
 import Web3 from "web3";
-import ethers from "ethers";
+import { ethers } from "ethers";
 import { instance } from "./src/config.js";
 import { axiosErrorHandler, xyRouteHandler, xySwapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};

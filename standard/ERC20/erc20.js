@@ -1,11 +1,11 @@
-import ethers from "ethers";
+import { ethers } from "ethers";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 
 /*
     _signer --> Ethers Obj,
     _token --> String
 */
-async function decimals(_signer, _token){
+async function decimals(_signer, _token) {
     const contract = new ethers.Contract(_token, ERC20, _signer);
     let code, message, data;
     await contract.decimals()
@@ -27,7 +27,7 @@ async function decimals(_signer, _token){
     _owner --> String,
     _spender --> String
 */
-async function allowance(_signer, _token, _owner, _spender){
+async function allowance(_signer, _token, _owner, _spender) {
     const contract = new ethers.Contract(_token, ERC20, _signer);
     let code, message, data;
     await contract.allowance(_owner, _spender)
@@ -48,7 +48,7 @@ async function allowance(_signer, _token, _owner, _spender){
     _token --> String,
     _account --> String,
 */
-async function balanceOf(_signer, _token, _account){
+async function balanceOf(_signer, _token, _account) {
     const contract = new ethers.Contract(_token, ERC20, _signer);
     let code, message, data;
     await contract.balanceOf(_account)
