@@ -8,49 +8,109 @@
 	"56": {
 		"name": "Binance",
         "token":[
-			{"label": "axlUSDC", "address": "0x4268b8f0b87b6eae5d897996e6b845ddbd99adf3", "img": "axlUSDC", "description": "Axelar Bridged USDC"}
+			{"label": "WBNB", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "img": "WBNB", "description": "Wrapped BNB"},
+			{"label": "USDT", "address": "0x55d398326f99059ff775485246999027b3197955", "img": "USDT", "description": "Tether"},
+			{"label": "ETH", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "img": "ETH", "description": "Ethereum Token"},
+			{"label": "BTCB", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "img": "BTCB", "description": "Binance Bitcoin"},
+			{"label": "CAKE", "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", "img": "CAKE", "description": "PancakeSwap"},
+			{"label": "DOGE", "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43", "img": "DOGE", "description": "Dogecoin"},
+			{"label": "TON", "address": "0x76a797a59ba2c17726896976b7b3747bfd1d220f", "img": "TON", "description": "Toncoin"},
+			{"label": "USDC", "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "img": "USDC", "description": "USDC"},
+			{"label": "NMT", "address": "0x03AA6298F1370642642415EDC0db8b957783e8D6", "img": "NMT", "description": "NetMind Token"},
+			{"label": "SOL", "address": "0x570A5D26f7765Ecb712C0924E4De545B89fD43dF", "img": "SOL", "description": "Solana"},
+			{"label": "TRUMP", "address": "0x4eA98c1999575aaadfb38237Dd015c5E773F75a2", "img": "TRUMP", "description": "MAGA"}
 		]
 	},
 	"324": {
 		"name": "zkSync Era",
         "token":[
-			{"label": "USDC", "address": "0x1d17cbcf0d6d143135ae902365d2e5e2a16538d4", "img": "USDC", "description": "USDC"}
+			{"label": "USDC", "address": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4", "img": "USDC", "description": "USDC"},
+			{"label": "WBTC", "address": "0xBBeB516fb02a01611cBBE0453Fe3c580D7281011", "img": "WBTC", "description": "Wrapped Bitcoin"},
+			{"label": "WETH", "address": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91", "img": "WETH", "description": "Wrapped ETH"}
 		]
 	},
 	"5000": {
 		"name": "Mantle",
         "token":[
-			{"label": "WETH", "address": "0x4200000000000000000000000000000000000006", "img": "WETH", "description": "Wrapped ETH"}
+			{"label": "USDe", "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34", "img": "USDe", "description": "Ethena USDe"},
+			{"label": "USDT", "address": "0x201EBa5CC46D216Ce6DC03F6a759e8E766e956aE", "img": "USDT", "description": "Tether"},
+			{"label": "mETH", "address": "0xcDA86A272531e8640cD7F1a92c01839911B90bb0", "img": "mETH", "description": "Mantle Staked Ether"},
+			{"label": "WETH", "address": "0xdEAddEaDdeadDEadDEADDEAddEADDEAddead1111", "img": "WETH", "description": "Wrapped ETH"},
+			{"label": "PUFF", "address": "0x26a6b0dcdCfb981362aFA56D581e4A7dBA3Be140", "img": "PUFF", "description": "Puff The Dragon"},
+			{"label": "USDC", "address": "0x09Bc4E0D864854c6aFB6eB9A9cdF58aC190D0dF9", "img": "USDC", "description": "USDC"},
+			{"label": "WMNT", "address": "0x78c1b0C915c4FAA5FffA6CAbf0219DA63d7f4cb8", "img": "WMNT", "description": "Wrapped Mantle"},
+			{"label": "USDY", "address": "0x5bE26527e817998A7206475496fDE1E68957c5A6", "img": "USDY", "description": "Ondo USDD Yeld"},
+			{"label": "JOE", "address": "0x371c7ec6D8039ff7933a2AA28EB827Ffe1F52f07", "img": "JOE", "description": "JOE"},
+			{"label": "ENA", "address": "0x58538e6A46E07434d7E7375Bc268D3cb839C0133", "img": "ENA", "description": "Ethena"},
+			{"label": "MOE", "address": "0x4515A45337F461A11Ff0FE8aBF3c606AE5dC00c9", "img": "MOE", "description": "MOE"}
 		]
 	},
 	"8453": {
 		"name": "Base",
         "token":[
+			{"label": "AERO", "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631", "img": "AERO", "description": "Aerodrome Finance"},
+			{"label": "DEGEN", "address": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed", "img": "DEGEN", "description": "Degen"},
+			{"label": "SPEC", "address": "0x96419929d7949D6A801A6909c145C8EEf6A40431", "img": "SPEC", "description": "Spectral"},
+			{"label": "FP", "address": "0xFF0C532FDB8Cd566Ae169C1CB157ff2Bdc83E105", "img": "FP", "description": "Fren Pet"},
+			{"label": "PRIME", "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b", "img": "PRIME", "description": "Echelon Prime"},
+			{"label": "WETH", "address": "0x4200000000000000000000000000000000000006", "img": "WETH", "description": "Wrapped ETH"},
+			{"label": "USDbC", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "img": "USDbC", "description": "USD Base Coin"},
 			{"label": "USDC", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "img": "USDC", "description": "USDC"}
 		]
 	},
 	"42161": {
 		"name": "Arbitrum",
         "token":[
-			{"label": "USDC", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "img": "USDC", "description": "USDC"}
+			{"label": "WBTC", "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "img": "WBTC", "description": "Wrapped Bitcoin"},
+			{"label": "WETH", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "img": "WETH", "description": "Wrapped ETH"},
+			{"label": "ARB", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "img": "ARB", "description": "Arbitrum"},
+			{"label": "PENDLE", "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8", "img": "PENDLE", "description": "Pendle"},
+			{"label": "GMX", "address": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a", "img": "GMX", "description": "GMX"},
+			{"label": "MAGIC", "address": "0x539bdE0d7Dbd336b79148AA742883198BBF60342", "img": "MAGIC", "description": "Magic"},
+			{"label": "GRAIL", "address": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8", "img": "GRAIL", "description": "Camelot Token"},
+			{"label": "MOR", "address": "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86", "img": "MOR", "description": "Morpheus"},
+			{"label": "weETH", "address": "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe", "img": "weETH", "description": "Wrapped eETH"},
+			{"label": "TRUF", "address": "0xb59c8912c83157a955f9d715e556257f432c35d7", "img": "TRUF", "description": "Truflation"},
+			{"label": "GSWIFT", "address": "0x580E933D90091b9cE380740E3a4A39c67eB85B4c", "img": "GSWIFT", "description": "GameSwift"},
+			{"label": "RAM", "address": "0xAAA6C1E32C55A7Bfa8066A6FAE9b42650F262418", "img": "RAM", "description": "Ramses Exchange"},
+			{"label": "WOO", "address": "0xcAFcD85D8ca7Ad1e1C6F82F651fA15E33AEfD07b", "img": "WOO", "description": "WOO"},
+			{"label": "BPET", "address": "0x6dAF586B7370B14163171544fca24AbcC0862ac5", "img": "BPET", "description": "xPet.tech"},
+			{"label": "LDO", "address": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66", "img": "LDO", "description": "Lido DAO"},
+			{"label": "USDC", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "img": "USDC", "description": "USDC"},
+			{"label": "USDC.e", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "img": "USDC", "description": "USDC (Bridged)"}
 		]
 	},
 	"59144": {
 		"name": "Linea",
         "token":[
-			{"label": "WETH", "address": "0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f", "img": "WETH", "description": "Wrapped ETH"}
+			{"label": "WETH", "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f", "img": "WETH", "description": "Wrapped ETH"},
+			{"label": "USDC", "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff", "img": "USDC", "description": "USDC"},
+			{"label": "USDT", "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93", "img": "USDT", "description": "Tether"},
+			{"label": "ezETH", "address": "0x2416092f143378750bb29b79eD961ab195CcEea5", "img": "ezETH", "description": "Renzo Restaked ETH"},
+			{"label": "wrsETH", "address": "0xD2671165570f41BBB3B0097893300b6EB6101E6C", "img": "wrsETH", "description": "Wrapped rsETH"},
+			{"label": "weETH", "address": "0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6", "img": "weETH", "description": "Wrapped eETH"},
+			{"label": "WBTC", "address": "0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4", "img": "WBTC", "description": "Wrapped Bitcoin"}
 		]
 	},
 	"81457": {
 		"name": "Blast",
         "token":[
-			{"label": "WETH", "address": "0x4300000000000000000000000000000000000004", "img": "WETH", "description": "Wrapped ETH"}
+			{"label": "YES", "address": "0x20fE91f17ec9080E3caC2d688b4EcB48C5aC3a9C", "img": "YES", "description": "YES Money"},
+			{"label": "WETH", "address": "0x4300000000000000000000000000000000000004", "img": "WETH", "description": "Wrapped ETH"},
+			{"label": "ezETH", "address": "0x2416092f143378750bb29b79eD961ab195CcEea5", "img": "ezETH", "description": "Renzo Restaked ETH"},
+			{"label": "JUICE", "address": "0x818a92bc81Aad0053d72ba753fb5Bc3d0C5C0923", "img": "JUICE", "description": "Juce Finance"},
+			{"label": "PAC", "address": "0x5ffd9EbD27f2fcAB044c0f0a26A45Cb62fa29c06", "img": "PAC", "description": "PacMoon"},
+			{"label": "axlUSDC", "address": "0xEB466342C4d449BC9f53A865D5Cb90586f405215", "img": "axlUSDC", "description": "Axelar Wrapped USDC"},
+			{"label": "USDB", "address": "0x4300000000000000000000000000000000000003", "img": "USDB", "description": "USDB"}
 		]
 	},
 	"534352": {
         "name": "Scroll",
         "token":[
-			{"label": "WETH", "address": "0x5300000000000000000000000000000000000004", "img": "WETH", "description": "Wrapped ETH"}
+			{"label": "WETH", "address": "0x5300000000000000000000000000000000000004", "img": "WETH", "description": "Wrapped ETH"},
+			{"label": "USDC", "address": "0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4", "img": "USDC", "description": "USDC"},
+			{"label": "USDT", "address": "0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df", "img": "USDT", "description": "Tether"},
+			{"label": "WBTC", "address": "0x3C1BCa5a656e69edCD0D4E36BEbb3FcDAcA60Cf1", "img": "WBTC", "description": "Wrapped Bitcoin"}
 		]
     }
 }
