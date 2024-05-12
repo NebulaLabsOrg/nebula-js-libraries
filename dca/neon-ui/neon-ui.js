@@ -1,4 +1,4 @@
-import ethers from "ethers";
+import { ethers } from "ethers";
 import { definePrecisionForChain } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 import NUI from "../../abi/NUI.json" assert {type: "json"};
