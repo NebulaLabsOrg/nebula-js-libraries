@@ -1,0 +1,15 @@
+{
+  "name": "limit-order",
+  "version": "1.0",
+  "description": "Limit order management with pair ratio",
+  "main": "limit-order.js",
+  "type": "module",
+  "scripts": {
+    "test:ratio": "node ./test/ratio.js",
+    "test:conversion": "node ./test/conversion.js",
+    "test:check": "node ./test/check.js",
+    "clear": "npm chace clear --force"
+  },
+  "author": "nebula Labs",
+  "license": "MIT"
+}
