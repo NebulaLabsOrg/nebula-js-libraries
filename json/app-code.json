@@ -1,0 +1,8 @@
+{
+    "301": "No browser wallet installed",
+    "302": "Unsupported Chain",
+    "303": "User Request Rejected",
+    "304": "Unsupported Chain during Addition",
+    "305": "Error Connecting to Blockchain",
+    "306": "Error Retrieving Total USD Processed from Database"
+}
