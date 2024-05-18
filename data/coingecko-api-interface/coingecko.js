@@ -36,10 +36,13 @@ async function chainlist() {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _chainId --> Integer,
-    _tokenAddress --> String,
-*/
+/**
+ * Retrieves the price of a token from its address on Coingecko.
+ *
+ * @param {number} _chainId - The chain ID of the token.
+ * @param {string} _tokenAddress - The address of the token.
+ * @returns {Promise<Object>} - An object containing the code, message, and price.
+ */
 async function priceFromAddress(_chainId, _tokenAddress) {
     let params = {
         contract_addresses: _tokenAddress,

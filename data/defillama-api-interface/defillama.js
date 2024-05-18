@@ -19,10 +19,13 @@ async function chainlist() {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _chainId --> Integer,
-    _tokenAddress --> String,
-*/
+/**
+ * Retrieves the price of a token from a given address.
+ *
+ * @param {number} _chainId - The chain ID.
+ * @param {string} _tokenAddress - The token address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function priceFromAddress(_chainId, _tokenAddress) {
     let params = {
         searchWidth: "4h",
@@ -47,13 +50,16 @@ async function priceFromAddress(_chainId, _tokenAddress) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _chainId --> Integer,
-    _tokenAddress --> String,
-    _fromTimestamp --> Integer (UNIX),
-    _span --> Integer,
-    _period --> String
-*/
+/**
+ * Retrieves the price chart data of a token from a given address.
+ *
+ * @param {number} _chainId - The chain ID.
+ * @param {string} _tokenAddress - The token address.
+ * @param {number} _fromTimestamp - The starting timestamp in UNIX format.
+ * @param {number} _span - The time span in seconds.
+ * @param {string} _period - The time period.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function priceChartFromAddress(_chainId, _tokenAddress, _fromTimestamp, _span, _period) {
     let params = {
         start: _fromTimestamp,

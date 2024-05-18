@@ -15,14 +15,17 @@ let swapData = {
     dstValue: "0"
 }
 
-/*
-    _apiKey --> String,
-    _chainId --> Integer,
-    _slippage --> Number,
-    _srcToken --> String,
-    _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String,
-*/
+/**
+ * Retrieves the route for swapping tokens.
+ *
+ * @param {string} _apiKey - API key.
+ * @param {number} _chainId - Chain ID.
+ * @param {number} _slippage - Slippage value.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _srcAmount - Source token amount in BN wei (etherjs).
+ * @param {string} _dstToken - Destination token address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function getRoute(_apiKey, _chainId, _slippage, _srcToken, _srcAmount, _dstToken) {
     let params = {
         sellToken: _srcToken,
@@ -49,20 +52,23 @@ async function getRoute(_apiKey, _chainId, _slippage, _srcToken, _srcAmount, _ds
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _apiKey --> String,
-    _rpc --> String,
-    _prvKey --> String,
-    _chainId --> Integer,
-    _slippage --> Number,
-    _srcToken --> String,
-    _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String,
-    _reciever --> String,
-    _gasPrice --> String gwei,
-    _numberConfirmation --> Integer
-    _delayForCheckTx --> Integer ms
-*/
+/**
+ * Swaps tokens using 0x protocol.
+ *
+ * @param {string} _apiKey - API key.
+ * @param {string} _rpc - RPC endpoint.
+ * @param {string} _prvKey - Private key.
+ * @param {number} _chainId - Chain ID.
+ * @param {number} _slippage - Slippage value.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _srcAmount - Source token amount in BN wei (etherjs).
+ * @param {string} _dstToken - Destination token address.
+ * @param {string} _receiver - Receiver address.
+ * @param {string} _gasPrice - Gas price in Gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @param {number} _delayForCheckTx - Delay in milliseconds for checking transaction status.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function swap(_apiKey, _rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _dstToken, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
     const web3 = new Web3(_rpc);
     //GetRoute
@@ -143,14 +149,18 @@ async function swap(_apiKey, _rpc, _prvKey, _chainId, _slippage, _srcToken, _src
         });
     return swapData;
 }
-/*
-    _rpc --> String,
-    _token --> String,
-    _amount --> BN in wei (etherjs),
-    _spender --> String,
-    _gasPrice --> String Gwei,
-    _numberConfirmation --> Integer
-*/
+/**
+ * Approves the spender to spend a certain amount of tokens.
+ *
+ * @param {string} _rpc - RPC endpoint.
+ * @param {string} _prvKey - Private key.
+ * @param {string} _token - Token address.
+ * @param {string} _amount - Amount of tokens to approve in BN wei (etherjs).
+ * @param {string} _spender - Spender address.
+ * @param {string} _gasPrice - Gas price in Gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
     const contract = new ethers.Contract(_token, ERC20, signer);
@@ -174,14 +184,18 @@ async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _num
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _rpc --> String,
-    _token --> String,
-    _amount --> BN in wei (etherjs),
-    _to --> String,
-    _gasPrice --> String Gwei,
-    _numberConfirmation --> Integer
-*/
+/**
+ * Transfers tokens to a specified address.
+ *
+ * @param {string} _rpc - RPC endpoint.
+ * @param {string} _prvKey - Private key.
+ * @param {string} _token - Token address.
+ * @param {string} _amount - Amount of tokens to transfer in BN wei (etherjs).
+ * @param {string} _to - Receiver address.
+ * @param {string} _gasPrice - Gas price in Gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function transfer(_rpc, _prvKey, _token, _amount, _to, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
     const contract = new ethers.Contract(_token, ERC20, signer);

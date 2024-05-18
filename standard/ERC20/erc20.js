@@ -1,10 +1,13 @@
 import { ethers } from "ethers";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 
-/*
-    _signer --> Ethers Obj,
-    _token --> String
-*/
+/**
+ * Retrieves the decimals of a token.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _token - Token address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function decimals(_signer, _token) {
     const contract = new ethers.Contract(_token, ERC20, _signer);
     let code, message, data;
@@ -21,12 +24,15 @@ async function decimals(_signer, _token) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _token --> String,
-    _owner --> String,
-    _spender --> String
-*/
+/**
+ * Checks the allowance of a spender.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _token - Token address.
+ * @param {string} _owner - Owner address.
+ * @param {string} _spender - Spender address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function allowance(_signer, _token, _owner, _spender) {
     const contract = new ethers.Contract(_token, ERC20, _signer);
     let code, message, data;
@@ -43,11 +49,14 @@ async function allowance(_signer, _token, _owner, _spender) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _token --> String,
-    _account --> String,
-*/
+/**
+ * Retrieves the balance of an account.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _token - Token address.
+ * @param {string} _account - Account address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function balanceOf(_signer, _token, _account) {
     const contract = new ethers.Contract(_token, ERC20, _signer);
     let code, message, data;
@@ -64,13 +73,16 @@ async function balanceOf(_signer, _token, _account) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _token --> String,
-    _amount --> BN in Wei
-    _spender --> String,
-    _numberConfirmation --> Number
-*/
+/**
+ * Approves a spender to spend a certain amount of tokens.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _token - Token address.
+ * @param {string} _amount - Amount in BN Wei.
+ * @param {string} _spender - Spender address.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function approve(_signer, _token, _amount, _spender, _numberConfirmation) {
     const contract = new ethers.Contract(_token, ERC20, _signer);
     let code, message, hash;
