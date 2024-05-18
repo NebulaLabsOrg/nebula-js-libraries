@@ -14,14 +14,17 @@ let swapData = {
     dstValue: "0"
 }
 
-/*
-    _chainId --> Integer,
-    _srcToken --> String,
-    _srcDecimals --> Integer,
-    _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String,
-    _dstDecimals --> Integer
-*/
+/**
+ * Retrieves the route for swapping tokens.
+ *
+ * @param {number} _chainId - Chain ID.
+ * @param {string} _srcToken - Source token address.
+ * @param {number} _srcDecimals - Source token decimals.
+ * @param {string} _srcAmount - Source token amount in BN wei.
+ * @param {string} _dstToken - Destination token address.
+ * @param {number} _dstDecimals - Destination token decimals.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function getRoute(_chainId, _srcToken, _srcDecimals, _srcAmount, _dstToken, _dstDecimals) {
     let params = {
         srcToken: _srcToken,
@@ -52,21 +55,24 @@ async function getRoute(_chainId, _srcToken, _srcDecimals, _srcAmount, _dstToken
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _rpc --> String,
-    _prvKey --> String,
-    _chainId --> Integer,
-    _slippage --> Number,
-    _srcToken --> String,
-    _srcDecimals --> Integer,
-    _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String,
-    _dstDecimals --> Integer,
-    _reciever --> String,
-    _gasPrice --> String gwei,
-    _numberConfirmation --> Integer
-    _delayForCheckTx --> Integer ms
-*/
+/**
+ * Swaps tokens on the ParaSwap platform.
+ *
+ * @param {string} _rpc - RPC URL.
+ * @param {string} _prvKey - Private key.
+ * @param {number} _chainId - Chain ID.
+ * @param {number} _slippage - Slippage value.
+ * @param {string} _srcToken - Source token address.
+ * @param {number} _srcDecimals - Source token decimals.
+ * @param {string} _srcAmount - Source token amount in BN wei.
+ * @param {string} _dstToken - Destination token address.
+ * @param {number} _dstDecimals - Destination token decimals.
+ * @param {string} _receiver - Receiver address.
+ * @param {string} _gasPrice - Gas price in Gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @param {number} _delayForCheckTx - Delay in milliseconds for checking transaction status.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcDecimals, _srcAmount, _dstToken, _dstDecimals, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
     const web3 = new Web3(_rpc);
     //GetRoute
@@ -146,14 +152,18 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcDecimals,
         });
     return swapData;
 }
-/*
-    _rpc --> String,
-    _token --> String,
-    _amount --> BN in wei (etherjs),
-    _spender --> String,
-    _gasPrice --> String Gwei,
-    _numberConfirmation --> Integer
-*/
+/**
+ * Approves the spender to spend a certain amount of tokens.
+ *
+ * @param {string} _rpc - RPC URL.
+ * @param {string} _prvKey - Private key.
+ * @param {string} _token - Token address.
+ * @param {string} _amount - Token amount in BN wei.
+ * @param {string} _spender - Spender address.
+ * @param {string} _gasPrice - Gas price in Gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
     const contract = new ethers.Contract(_token, ERC20, signer);

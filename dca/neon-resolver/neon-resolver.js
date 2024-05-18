@@ -4,12 +4,15 @@ import NRI from "../../abi/NRI.json" assert {type: "json"};
 import NDB from "../../abi/NDB.json" assert {type: "json"};
 
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-    @param {string Gwei} _gasPrice
-    @param {number} _numberConfirmation
-*/
+ * Executes a snaps transaction.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @param {string} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - The number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function snapsExecution(_rpc, _prvKey, _NRI, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
@@ -37,13 +40,16 @@ async function snapsExecution(_rpc, _prvKey, _NRI, _gasPrice, _numberConfirmatio
     return { code: code, message: message, hash: hash }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-    @param {array of Number or BN} _arrayDcaIds
-    @param {string Gwei} _gasPrice
-    @param {number} _numberConfirmation
-*/
+ * Executes the start of an execution.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @param {array of Number or BN} _arrayDcaIds - The array of DCA IDs.
+ * @param {string Gwei} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - The number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function executionStart(_rpc, _prvKey, _NRI, _arrayDcaIds, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
@@ -71,14 +77,17 @@ async function executionStart(_rpc, _prvKey, _NRI, _arrayDcaIds, _gasPrice, _num
     return { code: code, message: message, hash: hash }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-    @param {array of Number or BN} _arrayDcaIds
-    @param {array of Number or BN} _arrayDcaCode
-    @param {string Gwei} _gasPrice
-    @param {number} _numberConfirmation
-*/
+ * Updates the positions for a given array of DCA IDs.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @param {array of Number or BN} _arrayDcaIds - The array of DCA IDs.
+ * @param {array of Number or BN} _arrayDcaCode - The array of DCA codes.
+ * @param {string Gwei} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - The number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function updatePositions(_rpc, _prvKey, _NRI, _arrayDcaIds, _arrayDcaCode, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
@@ -106,14 +115,17 @@ async function updatePositions(_rpc, _prvKey, _NRI, _arrayDcaIds, _arrayDcaCode,
     return { code: code, message: message, hash: hash }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-    @param {array of Number or BN} _arrayDcaIds
-    @param {number or BN} _maxDcaPerExecution
-    @param {string Gwei} _gasPrice
-    @param {number} _numberConfirmation
-*/
+ * Executes the completion of an execution.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @param {array of Number or BN} _arrayDcaIds - The array of DCA IDs.
+ * @param {number or BN} _maxDcaPerExecution - The maximum number of DCA per execution.
+ * @param {string Gwei} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - The number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function executionCompletion(_rpc, _prvKey, _NRI, _arrayDcaIds, _maxDcaPerExecution, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
@@ -141,15 +153,18 @@ async function executionCompletion(_rpc, _prvKey, _NRI, _arrayDcaIds, _maxDcaPer
     return { code: code, message: message, hash: hash }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NDB
-    @param {number or BN} _chainId
-    @param {number is USD} _amountUSD
-    @param {number} _precision
-    @param {string Gwei} _gasPrice
-    @param {number} _numberConfirmation
-*/
+ * Adds the amount processed for a given chain ID.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NDB - The NDB address.
+ * @param {number or BN} _chainId - The chain ID.
+ * @param {number} _amountUSD - The amount in USD.
+ * @param {number} _precision - The precision.
+ * @param {string Gwei} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - The number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function addAmountProcessed(_rpc, _prvKey, _NDB, _chainId, _amountUSD, _precision, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NDB, NDB, signer);
@@ -177,19 +192,22 @@ async function addAmountProcessed(_rpc, _prvKey, _NDB, _chainId, _amountUSD, _pr
     return { code: code, message: message, hash: hash }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NDB
-    @param {number or BN} _chainId
-    @param {array of String} _arrayOwner
-    @param {array of String} _arraySrcToken
-    @param {array of String} _arrayDstToken
-    @param {array of BN wei} _arrayTokenValue
-    @param {array of Number in USD} _arrayTokenAmount
-    @param {number} _precision
-    @param {string Gwei} _gasPrice
-    @param {number} _numberConfirmation
-*/
+ * Stores execution data for multiple owners and tokens.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NDB - The NDB address.
+ * @param {number or BN} _chainId - The chain ID.
+ * @param {array of String} _arrayOwner - The array of owner addresses.
+ * @param {array of String} _arraySrcToken - The array of source token addresses.
+ * @param {array of String} _arrayDstToken - The array of destination token addresses.
+ * @param {array of BN wei} _arrayTokenValue - The array of token values in BN wei.
+ * @param {array of Number in USD} _arrayTokenAmount - The array of token amounts in USD.
+ * @param {number} _precision - The precision.
+ * @param {string Gwei} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - The number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount, _precision, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NDB, NDB, signer);
@@ -217,10 +235,13 @@ async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _a
     return { code: code, message: message, hash: hash }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-*/
+ * Retrieves the amount of executable positions.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @returns {Promise<Object>} - An object containing the code, message, and executable amount.
+ */
 async function amountExecutablePositions(_rpc, _prvKey, _NRI) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
@@ -239,11 +260,14 @@ async function amountExecutablePositions(_rpc, _prvKey, _NRI) {
     return { code: code, message: message, executable: executable }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-    @param {Number or BN} _amountExecutablePositions
-*/
+ * Retrieves the executable IDs for a given amount of executable positions.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @param {number or BN} _amountExecutablePositions - The amount of executable positions.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function executableIds(_rpc, _prvKey, _NRI, _amountExecutablePositions) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
@@ -262,11 +286,14 @@ async function executableIds(_rpc, _prvKey, _NRI, _amountExecutablePositions) {
     return { code: code, message: message, data: data }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-    @param {array of Number or BN} _arrayDcaIds
-*/
+ * Retrieves the details of executions for a given array of DCA IDs.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @param {array of Number or BN} _arrayDcaIds - The array of DCA IDs.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function executionsDetail(_rpc, _prvKey, _NRI, _arrayDcaIds) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
@@ -285,11 +312,14 @@ async function executionsDetail(_rpc, _prvKey, _NRI, _arrayDcaIds) {
     return { code: code, message: message, data: data }
 }
 /**
-    @param {string} _rpc
-    @param {string} _prvKey
-    @param {string} _NRI
-    @param {Number or BN} _dcaId
-*/
+ * Retrieves the amount transferred for a given DCA ID.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NRI - The NRI address.
+ * @param {number or BN} _dcaId - The DCA ID.
+ * @returns {Promise<Object>} - An object containing the code, message, and amount.
+ */
 async function amountTransfered(_rpc, _prvKey, _NRI, _dcaId) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);

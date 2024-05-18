@@ -14,12 +14,15 @@ let swapData = {
     dstValue: "0"
 }
 
-/*
-    _chainId --> Integer,
-    _srcToken --> String,
-    _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String
-*/
+/**
+ * Retrieves the route for swapping tokens.
+ *
+ * @param {number} _chainId - Chain ID.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _srcAmount - Source token amount in BN wei (etherjs).
+ * @param {string} _dstToken - Destination token address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function getRoute(_chainId, _srcToken, _srcAmount, _dstToken) {
     let chain = kyberswapChainDecode(_chainId);
     if (chain.code != 200) return { code: chain.code, message: "Chain not supported by Kyberswap", data: null }
@@ -50,19 +53,22 @@ async function getRoute(_chainId, _srcToken, _srcAmount, _dstToken) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _rpc --> String,
-    _prvKey --> String,
-    _chainId --> Integer,
-    _slippage --> Number,
-    _srcToken --> String,
-    _srcAmount --> BN in wei (etherjs),
-    _dstToken --> String
-    _reciever --> String,
-    _gasPrice --> String gwei,
-    _numberConfirmation --> Integer
-    _delayForCheckTx --> Integer ms
-*/
+/**
+ * Swaps tokens on Kyberswap.
+ *
+ * @param {string} _rpc - RPC endpoint.
+ * @param {string} _prvKey - Private key.
+ * @param {number} _chainId - Chain ID.
+ * @param {number} _slippage - Slippage value.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _srcAmount - Source token amount in BN wei (etherjs).
+ * @param {string} _dstToken - Destination token address.
+ * @param {string} _receiver - Receiver address.
+ * @param {string} _gasPrice - Gas price in gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @param {number} _delayForCheckTx - Delay in milliseconds for checking transaction status.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _dstToken, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
     const web3 = new Web3(_rpc);
     //GetRoute
@@ -137,14 +143,18 @@ async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _
         });
     return swapData;
 }
-/*
-    _rpc --> String,
-    _token --> String,
-    _amount --> BN in wei (etherjs),
-    _spender --> String,
-    _gasPrice --> String Gwei,
-    _numberConfirmation --> Integer
-*/
+/**
+ * Approves the spender to spend a certain amount of tokens.
+ *
+ * @param {string} _rpc - RPC endpoint.
+ * @param {string} _prvKey - Private key.
+ * @param {string} _token - Token address.
+ * @param {string} _amount - Token amount in BN wei (etherjs).
+ * @param {string} _spender - Spender address.
+ * @param {string} _gasPrice - Gas price in gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
     const contract = new ethers.Contract(_token, ERC20, signer);

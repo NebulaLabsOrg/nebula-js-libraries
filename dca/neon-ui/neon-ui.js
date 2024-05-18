@@ -3,14 +3,18 @@ import { definePrecisionForChain } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 import NUI from "../../abi/NUI.json" assert {type: "json"};
 import NDB from "../../abi/NDB.json" assert {type: "json"};
-/*
-    _signer --> Ethers Obj,
-    _NRI --> String,
-    _srcToken --> String,
-    _amount --> Bn in wei (etherjs),
-    _increment --> bool
-    _numberConfirmation --> Number
-*/
+
+/**
+ * Manages the approval for a token.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NRI - NRI address.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _amount - Amount in BN wei.
+ * @param {boolean} _increment - Whether to increase the allowance or not.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function manageApproval(_signer, _NRI, _srcToken, _amount, _increment, _numberConfirmation) {
     const token = new ethers.Contract(_srcToken, ERC20, _signer);
     let code, message, hash;
@@ -32,21 +36,24 @@ async function manageApproval(_signer, _NRI, _srcToken, _amount, _increment, _nu
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-    _params:
-        _params.receiver, --> String
-        _params.srcToken, --> String ERC20
-        _params.dstToken, --> String ERC20
-        _params.tau, --> Integer
-        _params.exeRequired, --> Integer
-        _params.exeStart, --> Integer
-        _params.srcAmount, --> String in ether (etherjs),
-        _params.limitOrderBuy --> Number
-    _precision --> Number
-    _numberConfirmation --> Number
-*/
+/**
+ * Creates a DCA (Dollar Cost Averaging) contract.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @param {Object} _params - Parameters for creating the DCA contract:
+ *      _params.receiver,{Object}
+        _params.srcToken,{Object}
+        _params.dstToken,{Object}
+        _params.tau,{number}
+        _params.exeRequired,{number}
+        _params.exeStart,{number}
+        _params.srcAmount,{string} ether
+        _params.limitOrderBuy{number}
+ * @param {number} _precision - Precision value.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function createDCA(_signer, _NUI, _params, _precision, _numberConfirmation) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     const token = new ethers.Contract(_params.srcToken, ERC20, _signer);
@@ -79,12 +86,15 @@ async function createDCA(_signer, _NUI, _params, _precision, _numberConfirmation
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-    _indentifier --> String
-    _numberConfirmation --> Number
-*/
+/**
+ * Closes a DCA (Dollar Cost Averaging) contract.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @param {string} _indentifier - Identifier of the DCA contract.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function closeDCA(_signer, _NUI, _indentifier, _numberConfirmation) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, hash;
@@ -105,12 +115,15 @@ async function closeDCA(_signer, _NUI, _indentifier, _numberConfirmation) {
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-    _indentifier --> String
-    _numberConfirmation --> Number
-*/
+/**
+ * Skips the next execution of a DCA (Dollar Cost Averaging) contract.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @param {string} _indentifier - Identifier of the DCA contract.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
 async function skipNextExecution(_signer, _NUI, _indentifier, _numberConfirmation) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, hash;
@@ -131,10 +144,13 @@ async function skipNextExecution(_signer, _NUI, _indentifier, _numberConfirmatio
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-*/
+/**
+ * User Total DCA.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function userTotalDca(_signer, _NUI) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
@@ -151,10 +167,14 @@ async function userTotalDca(_signer, _NUI) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-*/
+
+/**
+ * User Total Queue.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function userTotalQueue(_signer, _NUI) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
@@ -171,10 +191,12 @@ async function userTotalQueue(_signer, _NUI) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-*/
+/**
+ * Parameters for the function.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ */
 async function getAllUserDca(_signer, _NUI) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
@@ -191,10 +213,12 @@ async function getAllUserDca(_signer, _NUI) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-*/
+/**
+ * Manages the approval for a token.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ */
 async function getAllUserQueuedDca(_signer, _NUI) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
@@ -211,11 +235,14 @@ async function getAllUserQueuedDca(_signer, _NUI) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-    _indentifier --> String
-*/
+/**
+ * Retrieves the DCA detail for a given identifier.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @param {string} _indentifier - Identifier of the DCA contract.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function getDcaDetail(_signer, _NUI, _indentifier) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
@@ -232,12 +259,15 @@ async function getDcaDetail(_signer, _NUI, _indentifier) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _NDB --> String,
-    _indentifier --> String
-    _dcaCreationDate --> Number (s)
-*/
+/**
+ * Retrieves the DCA execution data for a given identifier and creation date.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NDB - NDB address.
+ * @param {string} _indentifier - Identifier of the DCA contract.
+ * @param {number} _dcaCreationDate - Creation date of the DCA contract in seconds.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function getDcaExecutionData(_signer, _NDB, _indentifier, _dcaCreationDate) {
     const contract = new ethers.Contract(_NDB, NDB, _signer);
     let code, message, data;
@@ -267,12 +297,15 @@ async function getDcaExecutionData(_signer, _NDB, _indentifier, _dcaCreationDate
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _NDB --> String,
-    _srcToken --> String
-    _dstToken --> String
-*/
+/**
+ * Checks if a position is available for a given source token and destination token.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _dstToken - Destination token address.
+ * @returns {Promise<Object>} - An object containing the code, message, and availability.
+ */
 async function positionAvailable(_signer, _NUI, _srcToken, _dstToken) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
@@ -289,13 +322,16 @@ async function positionAvailable(_signer, _NUI, _srcToken, _dstToken) {
         });
     return { code: code, message: message, available: data }
 }
-/*
-    _signer --> Ethers Obj,
-    _NUI --> String,
-    _srcToken --> String in ether (etherjs)
-    _srcAmount --> String
-    _exeRequired --> Number
-*/
+/**
+ * Calculates the allowance for a token.
+ *
+ * @param {Object} _signer - Ethers object.
+ * @param {string} _NUI - NUI address.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _srcAmount - Amount in ether.
+ * @param {number} _exeRequired - Required execution amount.
+ * @returns {Promise<Object>} - An object containing the code, message, and data.
+ */
 async function calculateAllowance(_signer, _NUI, _srcToken, _srcAmount, _exeRequired) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     const token = new ethers.Contract(_srcToken, ERC20, _signer);
