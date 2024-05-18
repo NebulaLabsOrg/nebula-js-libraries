@@ -1,19 +1,25 @@
 import ethers from "ethers";
-import { definePrecisionForChain, defineArrayPrecisionForChain } from "./src/utils.js";
+import { definePrecisionForChain, defineArrayPrecisionForChain, getGasLimit } from "./src/utils.js";
 import NRI from "../../abi/NRI.json" assert {type: "json"};
 import NDB from "../../abi/NDB.json" assert {type: "json"};
 
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String,
-    _numberConfirmation --> Number
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
+    @param {string Gwei} _gasPrice
+    @param {number} _numberConfirmation
 */
-async function snapsExecution(_rpc, _prvKey, _NRI, _numberConfirmation) {
+async function snapsExecution(_rpc, _prvKey, _NRI, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
-    await contract.snapsExecution()
+    let gasLimit = await getGasLimit(contract, "snapsExecution");
+
+    await contract.snapsExecution({
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
@@ -30,18 +36,24 @@ async function snapsExecution(_rpc, _prvKey, _NRI, _numberConfirmation) {
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String,
-    _arrayDcaIds --> Array of Number / BN,
-    _numberConfirmation --> Number
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
+    @param {array of Number or BN} _arrayDcaIds
+    @param {string Gwei} _gasPrice
+    @param {number} _numberConfirmation
 */
-async function executionStart(_rpc, _prvKey, _NRI, _arrayDcaIds, _numberConfirmation) {
+async function executionStart(_rpc, _prvKey, _NRI, _arrayDcaIds, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
-    await contract.executionStart(_arrayDcaIds)
+    let gasLimit = await getGasLimit(contract, "executionStart", [_arrayDcaIds]);
+    
+    await contract.executionStart(_arrayDcaIds, {
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
@@ -58,19 +70,25 @@ async function executionStart(_rpc, _prvKey, _NRI, _arrayDcaIds, _numberConfirma
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String,
-    _arrayDcaIds --> Array of Number / BN,
-    _arrayDcaCode --> Array of Number / BN,
-    _numberConfirmation --> Number
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
+    @param {array of Number or BN} _arrayDcaIds
+    @param {array of Number or BN} _arrayDcaCode
+    @param {string Gwei} _gasPrice
+    @param {number} _numberConfirmation
 */
-async function updatePositions(_rpc, _prvKey, _NRI, _arrayDcaIds, _arrayDcaCode, _numberConfirmation) {
+async function updatePositions(_rpc, _prvKey, _NRI, _arrayDcaIds, _arrayDcaCode, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
-    await contract.updatePositions(_arrayDcaIds, _arrayDcaCode)
+    let gasLimit = await getGasLimit(contract, "updatePositions", [_arrayDcaIds, _arrayDcaCode]);
+
+    await contract.updatePositions(_arrayDcaIds, _arrayDcaCode, {
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
@@ -87,19 +105,25 @@ async function updatePositions(_rpc, _prvKey, _NRI, _arrayDcaIds, _arrayDcaCode,
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String,
-    _arrayDcaIds --> Array of Number / BN,
-    _maxDcaPerExecution --> Number / BN,
-    _numberConfirmation --> Number
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
+    @param {array of Number or BN} _arrayDcaIds
+    @param {number or BN} _maxDcaPerExecution
+    @param {string Gwei} _gasPrice
+    @param {number} _numberConfirmation
 */
-async function executionCompletion(_rpc, _prvKey, _NRI, _arrayDcaIds, _maxDcaPerExecution, _numberConfirmation) {
+async function executionCompletion(_rpc, _prvKey, _NRI, _arrayDcaIds, _maxDcaPerExecution, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
-    await contract.executionCompletion(_arrayDcaIds, _maxDcaPerExecution)
+    let gasLimit = await getGasLimit(contract, "executionCompletion", [_arrayDcaIds, _maxDcaPerExecution]);
+
+    await contract.executionCompletion(_arrayDcaIds, _maxDcaPerExecution, {
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
@@ -116,20 +140,26 @@ async function executionCompletion(_rpc, _prvKey, _NRI, _arrayDcaIds, _maxDcaPer
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NDB --> String,
-    _chainId --> Number / BN,
-    _amountUSD --> Number in USD
-    _precision --> Number
-    _numberConfirmation --> Number
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NDB
+    @param {number or BN} _chainId
+    @param {number is USD} _amountUSD
+    @param {number} _precision
+    @param {string Gwei} _gasPrice
+    @param {number} _numberConfirmation
 */
-async function addAmountProcessed(_rpc, _prvKey, _NDB, _chainId, _amountUSD, _precision, _numberConfirmation) {
+async function addAmountProcessed(_rpc, _prvKey, _NDB, _chainId, _amountUSD, _precision, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NDB, NDB, signer);
     let code, message, hash;
-    await contract.addAmountProcessed(_chainId, definePrecisionForChain(_amountUSD, _precision))
+    let gasLimit = await getGasLimit(contract, "addAmountProcessed", [_chainId, definePrecisionForChain(_amountUSD, _precision)]);
+
+    await contract.addAmountProcessed(_chainId, definePrecisionForChain(_amountUSD, _precision), {
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
@@ -146,24 +176,30 @@ async function addAmountProcessed(_rpc, _prvKey, _NDB, _chainId, _amountUSD, _pr
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NDB --> String,
-    _chainId --> Number / BN,
-    _arrayOwner --> Array of String,
-    _arraySrcToken --> Array of String,
-    _arrayDstToken --> Array of String,
-    _arrayTokenValue --> Array of BN
-    _arrayTokenAmount --> Array of Number in USD
-    _precision --> Number
-    _numberConfirmation --> Number
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NDB
+    @param {number or BN} _chainId
+    @param {array of String} _arrayOwner
+    @param {array of String} _arraySrcToken
+    @param {array of String} _arrayDstToken
+    @param {array of BN wei} _arrayTokenValue
+    @param {array of Number in USD} _arrayTokenAmount
+    @param {number} _precision
+    @param {string Gwei} _gasPrice
+    @param {number} _numberConfirmation
 */
-async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount, _precision, _numberConfirmation) {
+async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount, _precision, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NDB, NDB, signer);
     let code, message, hash;
-    await contract.storeExecutionData(_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, defineArrayPrecisionForChain(_arrayTokenAmount, _precision))
+    let gasLimit = await getGasLimit(contract, "storeExecutionData", [_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, defineArrayPrecisionForChain(_arrayTokenAmount, _precision)]);
+
+    await contract.storeExecutionData(_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, defineArrayPrecisionForChain(_arrayTokenAmount, _precision), {
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
@@ -180,10 +216,10 @@ async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _a
         });
     return { code: code, message: message, hash: hash }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
 */
 async function amountExecutablePositions(_rpc, _prvKey, _NRI) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
@@ -202,11 +238,11 @@ async function amountExecutablePositions(_rpc, _prvKey, _NRI) {
         });
     return { code: code, message: message, executable: executable }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String,
-    _amountExecutablePositions --> Number / BN
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
+    @param {Number or BN} _amountExecutablePositions
 */
 async function executableIds(_rpc, _prvKey, _NRI, _amountExecutablePositions) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
@@ -225,11 +261,11 @@ async function executableIds(_rpc, _prvKey, _NRI, _amountExecutablePositions) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String,
-    _arrayDcaIds --> Array of Number / BN
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
+    @param {array of Number or BN} _arrayDcaIds
 */
 async function executionsDetail(_rpc, _prvKey, _NRI, _arrayDcaIds) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
@@ -248,11 +284,11 @@ async function executionsDetail(_rpc, _prvKey, _NRI, _arrayDcaIds) {
         });
     return { code: code, message: message, data: data }
 }
-/*
-    _rpc --> String,
-    _prvKey -_> String,
-    _NRI --> String,
-    _dcaId --> Number / BN
+/**
+    @param {string} _rpc
+    @param {string} _prvKey
+    @param {string} _NRI
+    @param {Number or BN} _dcaId
 */
 async function amountTransfered(_rpc, _prvKey, _NRI, _dcaId) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
