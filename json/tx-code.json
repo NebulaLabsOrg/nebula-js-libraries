@@ -1,15 +1,13 @@
 {
-    "200": "Successful",
-    "400": "Insufficient approved token",
+    "200": "Success",
+    "400": "Insufficient approved tokens",
     "401": "Insufficient balance",
     "402": "Limit order not reached",
-    "403": "API Request error",
-    "404": "Missing Aggregator Route",
-    "405": "Built Data Error",
-    "406": "Tx Reverted by Blockchain",
+    "403": "API request error",
+    "404": "Missing aggregator route",
+    "405": "Built data error",
+    "406": "Transaction reverted by blockchain",
     "407": "Insufficient balance across multiple DCAs",
     "408": "Request closure by user",
-    "409": "Insufficient allowance across multiple DCAs",
-    "500": "General network error",
-    "999": "Manual Refund will follow"
+    "999": "Manual refund will follow"
 }
