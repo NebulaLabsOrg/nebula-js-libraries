@@ -9,5 +9,7 @@
     "406": "Tx Reverted by Blockchain",
     "407": "Insufficient balance across multiple DCAs",
     "408": "Request closure by user",
+    "409": "Insufficient allowance across multiple DCAs",
+    "500": "General network error",
     "999": "Manual Refund will follow"
 }
