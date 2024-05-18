@@ -7,6 +7,7 @@
 		"fullName": "Ethereum Testnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://rpc2.sepolia.org",
 			"https://gateway.tenderly.co/public/sepolia"
@@ -27,6 +28,7 @@
 		"fullName": "Ethereum Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://eth.llamarpc.com"
 		],
@@ -46,6 +48,7 @@
 		"fullName": "Optimism",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://optimism-mainnet.infura.io"
 		],
@@ -65,6 +68,7 @@
 		"fullName": "Cronos Mainenet",
 		"nativeCoin": "CRO",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://cronos.blockpi.network/v1/rpc/public"
 		],
@@ -84,6 +88,7 @@
 		"fullName": "Binance Smart Chain",
 		"nativeCoin": "BNB",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://bsc-dataseed.bnbchain.org",
 			"https://bsc-dataseed2.bnbchain.org",
@@ -105,6 +110,7 @@
 		"fullName": "Gnosis",
 		"nativeCoin": "xDAI",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://rpc.gnosischain.com"
 		],
@@ -124,6 +130,7 @@
 		"fullName": "Polygon Mainnet",
 		"nativeCoin": "MATIC",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://polygon-rpc.com/"
 		],
@@ -143,6 +150,7 @@
 		"fullName": "Fantom Opera",
 		"nativeCoin": "FTM",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://1rpc.io/ftm",
 			"https://rpcapi.fantom.network",
@@ -164,6 +172,7 @@
 		"fullName": "zkSync Era Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://mainnet.era.zksync.io",
 			"https://1rpc.io/zksync2-era",
@@ -185,6 +194,7 @@
 		"fullName": "Polygon zkEVM",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://zkevm-rpc.com"
 		],
@@ -204,6 +214,7 @@
 		"fullName": "Moonriver",
 		"nativeCoin": "MOVR",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"wss://moonriver.unitedbloc.com:2001"
 		],
@@ -223,6 +234,7 @@
 		"fullName": "Mantle Mainnet",
 		"nativeCoin": "MNT",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://rpc.mantle.xyz",
 			"https://1rpc.io/mantle",
@@ -244,6 +256,7 @@
 		"fullName": "Base Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://1rpc.io/base",
 			"wss://base-rpc.publicnode.com",
@@ -265,6 +278,7 @@
 		"fullName": "Mode Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://1rpc.io/mode",
 			"https://mainnet.mode.network",
@@ -286,6 +300,7 @@
 		"fullName": "Arbitrum One",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://arb-pokt.nodies.app",
 			"https://1rpc.io/arb",
@@ -307,6 +322,7 @@
 		"fullName": "Celo Mainnet",
 		"nativeCoin": "CELO",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://forno.celo.org"
 		],
@@ -326,6 +342,7 @@
 		"fullName": "Avalanche C-Chain",
 		"nativeCoin": "AVAX",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://avalanche.blockpi.network/v1/rpc/public"
 		],
@@ -345,6 +362,7 @@
 		"fullName": "Linea Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://rpc.linea.build",
 			"https://linea.drpc.org",
@@ -366,6 +384,7 @@
 		"fullName": "Blast Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://rpc.blast.io",
 			"https://rpc.ankr.com/blast",
@@ -387,6 +406,7 @@
 		"fullName": "Scroll Mainet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://scroll.drpc.org",
 			"https://scroll.drpc.org",
@@ -408,6 +428,7 @@
 		"fullName": "Neon EVM Mainnet",
 		"nativeCoin": "NEON",
 		"decimal": 18,
+		"confirmation": 2,
 		"rpc": [
 			"https://neon-proxy-mainnet.solana.p2p.org"
 		],
