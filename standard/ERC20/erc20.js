@@ -103,11 +103,47 @@ async function approve(_signer, _token, _amount, _spender, _numberConfirmation) 
         });
     return { code: code, message: message, hash: hash }
 }
+/**
+ * Approves a spender to spend a certain amount of tokens.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _token - Token address.
+ * @param {string} _amount - Amount in BN Wei.
+ * @param {string} _spender - Spender address.
+ * @param {string} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
+async function backendApprove(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _numberConfirmation) {
+    const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
+    const contract = new ethers.Contract(_token, ERC20, signer);
+    let code, message, hash;
+    await contract.approve(_spender, _amount, {
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+    })
+        .then(async function (tx) {
+            code = 200;
+            message = "success";
+            hash = tx.hash;
+            await tx.wait(parseInt(_numberConfirmation))
+                .catch(function (error) {
+                    message = error.message;
+                })
+        })
+        .catch(function (error) {
+            code = 406;
+            message = error.message;
+            hash = "nd";
+        });
+    return { code: code, message: message, hash: hash }
+}
 
 const erc20 = {
     decimals,
     allowance,
     balanceOf,
-    approve
+    approve,
+    backendApprove
 }
 export default erc20;
