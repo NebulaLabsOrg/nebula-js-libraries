@@ -149,12 +149,13 @@ async function skipNextExecution(_signer, _NUI, _indentifier, _numberConfirmatio
  *
  * @param {Object} _signer - Ethers object.
  * @param {string} _NUI - NUI address.
+ * @param {string} _userAddress - User address.
  * @returns {Promise<Object>} - An object containing the code, message, and data.
  */
-async function userTotalDca(_signer, _NUI) {
+async function userTotalDca(_signer, _NUI, _userAddress) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
-    await contract.userTotalDca(_signer.address)
+    await contract.userTotalDca(_userAddress)
         .then(async function (response) {
             code = 200;
             message = "success";
@@ -173,12 +174,13 @@ async function userTotalDca(_signer, _NUI) {
  *
  * @param {Object} _signer - Ethers object.
  * @param {string} _NUI - NUI address.
+ * @param {string} _userAddress - User address.
  * @returns {Promise<Object>} - An object containing the code, message, and data.
  */
-async function userTotalQueue(_signer, _NUI) {
+async function userTotalQueue(_signer, _NUI, _userAddress) {
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, data;
-    await contract.userTotalQueue(_signer.address)
+    await contract.userTotalQueue(_userAddress)
         .then(async function (response) {
             code = 200;
             message = "success";
