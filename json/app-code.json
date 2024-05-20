@@ -11,5 +11,6 @@
     "504": "Invalid limit order value",
     "505": "Invalid receiver address selected",
     "506": "Invalid starting date set",
-    "507": "Insufficient balance to execute first transaction"
+    "507": "Insufficient balance to execute first transaction",
+    "600": "One or More Strategies Encountered Issues"
 }
