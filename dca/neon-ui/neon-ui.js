@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import { definePrecisionForChain } from "./src/utils.js";
+import { definePrecisionForChain, getGasLimit } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 import NUI from "../../abi/NUI.json" assert {type: "json"};
 import NDB from "../../abi/NDB.json" assert {type: "json"};
@@ -128,6 +128,42 @@ async function skipNextExecution(_signer, _NUI, _indentifier, _numberConfirmatio
     const contract = new ethers.Contract(_NUI, NUI, _signer);
     let code, message, hash;
     await contract.skipExecution(_indentifier)
+        .then(async function (tx) {
+            code = 200;
+            message = "success";
+            hash = tx.hash;
+            await tx.wait(parseInt(_numberConfirmation))
+                .catch(function (error) {
+                    message = error.message;
+                })
+        })
+        .catch(function (error) {
+            code = 406;
+            message = error.message;
+            hash = "nd";
+        });
+    return { code: code, message: message, hash: hash }
+}
+/**
+ * Trigger manage queue - For Backend.
+ *
+ * @param {string} _rpc - The RPC endpoint.
+ * @param {string} _prvKey - The private key.
+ * @param {string} _NUI - NUI address.
+ * @param {string} _gasPrice - The gas price in Gwei.
+ * @param {number} _numberConfirmation - Number of confirmations.
+ * @returns {Promise<Object>} - An object containing the code, message, and hash.
+ */
+async function manageQueue(_rpc, _prvKey, _NUI, _gasPrice, _numberConfirmation) {
+    const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
+    const contract = new ethers.Contract(_NUI, NUI, _signer);
+    let code, message, hash;
+    let gasLimit = await getGasLimit(contract, "manageQueue");
+
+    await contract.manageQueue({
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
@@ -363,6 +399,8 @@ const neon = {
     createDCA,
     closeDCA,
     skipNextExecution,
+    manageQueue,
+
 
     userTotalDca,
     userTotalQueue,
