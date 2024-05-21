@@ -2,7 +2,8 @@
 	"11155111": {
 		"name": "Sepolia",
         "token":[
-			{"label": "USDC", "address": "0x01", "img": "USDC", "description": "USDC"}
+			{"label": "USDC", "address": "0x8684B83110257770Eed15109E3c310CBAf78514f", "img": "USDC", "description": "USDC Sepolia"},
+			{"label": "ETH", "address": "0xA017f466Be60e67d4bd2018d9F540F45DDc6164F", "img": "ETH", "description": "Ethereum Token Sepolia"}
 		]
 	},
 	"56": {
