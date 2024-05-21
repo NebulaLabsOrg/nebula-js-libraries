@@ -156,7 +156,7 @@ async function skipNextExecution(_signer, _NUI, _indentifier, _numberConfirmatio
  */
 async function manageQueue(_rpc, _prvKey, _NUI, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
-    const contract = new ethers.Contract(_NUI, NUI, _signer);
+    const contract = new ethers.Contract(_NUI, NUI, signer);
     let code, message, hash;
     let gasLimit = await getGasLimit(contract, "manageQueue");
 
