@@ -1,5 +1,5 @@
 import ethers from "ethers";
-import { definePrecisionForChain, defineArrayPrecisionForChain, getGasLimit } from "./src/utils.js";
+import { definePrecisionForChain, getGasLimit } from "./src/utils.js";
 import NRI from "../../abi/NRI.json" assert {type: "json"};
 import NDB from "../../abi/NDB.json" assert {type: "json"};
 
@@ -203,18 +203,17 @@ async function addAmountProcessed(_rpc, _prvKey, _NDB, _chainId, _amountUSD, _pr
  * @param {array of String} _arrayDstToken - The array of destination token addresses.
  * @param {array of BN wei} _arrayTokenValue - The array of token values in BN wei.
  * @param {array of Number in USD} _arrayTokenAmount - The array of token amounts in USD.
- * @param {number} _precision - The precision.
  * @param {string Gwei} _gasPrice - The gas price in Gwei.
  * @param {number} _numberConfirmation - The number of confirmations.
  * @returns {Promise<Object>} - An object containing the code, message, and hash.
  */
-async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount, _precision, _gasPrice, _numberConfirmation) {
+async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount, _gasPrice, _numberConfirmation) {
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NDB, NDB, signer);
     let code, message, hash;
-    let gasLimit = await getGasLimit(contract, "storeExecutionData", [_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, defineArrayPrecisionForChain(_arrayTokenAmount, _precision)]);
+    let gasLimit = await getGasLimit(contract, "storeExecutionData", [_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount]);
 
-    await contract.storeExecutionData(_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, defineArrayPrecisionForChain(_arrayTokenAmount, _precision), {
+    await contract.storeExecutionData(_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount, {
         gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
         gasLimit: gasLimit
     })
