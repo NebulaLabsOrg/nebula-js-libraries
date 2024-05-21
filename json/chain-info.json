@@ -15,9 +15,9 @@
 		"blockScan": "https://sepolia.etherscan.io/",
 		"dca": {
 			"resolver": "",
-			"NDB": "0x14DbCD3c2CD3f455C07B7be8F4076BCbB98C1B58",
-			"NUI": "0x652d355b2d5c808784D3C785e4c5056b7aDB7f1B",
-			"NRI": "0xC2115b52561d0F82F1CB5bF3222Aa21f0992603A"
+			"NDB": "0xbdef3B10D2428C30093375167bd8a7194e2b3B83",
+			"NUI": "0x1990921AFd7bFF152aab5d9318867929AeA08fE0",
+			"NRI": "0x027BF7098Be4f5C91C79842A26bd06Bc45c7432f"
 		}
 	},
 	"1": {
