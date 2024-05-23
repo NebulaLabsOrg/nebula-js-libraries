@@ -22,11 +22,6 @@
     },
     {
         "inputs": [],
-        "name": "ExecutionNotRequired",
-        "type": "error"
-    },
-    {
-        "inputs": [],
         "name": "NotAuthorized",
         "type": "error"
     },
@@ -47,6 +42,25 @@
             }
         ],
         "name": "PositionClosedByError",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "identifier",
+                "type": "bytes32"
+            }
+        ],
+        "name": "PositionClosedByLimitOrderLimit",
         "type": "event"
     },
     {
@@ -265,6 +279,11 @@
                 "components": [
                     {
                         "internalType": "bool",
+                        "name": "onGoing",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
                         "name": "toBeClosed",
                         "type": "bool"
                     },
@@ -373,8 +392,18 @@
             {
                 "components": [
                     {
+                        "internalType": "bool",
+                        "name": "onGoing",
+                        "type": "bool"
+                    },
+                    {
                         "internalType": "uint8",
                         "name": "errCount",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "limitCount",
                         "type": "uint8"
                     },
                     {
