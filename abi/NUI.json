@@ -267,6 +267,19 @@
         "inputs": [
             {
                 "internalType": "uint40",
+                "name": "_id",
+                "type": "uint40"
+            }
+        ],
+        "name": "updateAllowance",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint40",
                 "name": "_timeToDelete",
                 "type": "uint40"
             },
@@ -386,11 +399,6 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "srcAmount",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
                         "name": "limitOrderBuy",
                         "type": "uint256"
                     }
@@ -448,6 +456,11 @@
                         "internalType": "uint40",
                         "name": "exePerformed",
                         "type": "uint40"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "srcAmount",
+                        "type": "uint256"
                     }
                 ],
                 "internalType": "struct UserDca[]",
@@ -503,6 +516,11 @@
                         "internalType": "uint40",
                         "name": "exePerformed",
                         "type": "uint40"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "srcAmount",
+                        "type": "uint256"
                     }
                 ],
                 "internalType": "struct UserDca[]",
