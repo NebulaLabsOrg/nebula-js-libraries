@@ -19,7 +19,10 @@ async function manageApproval(_signer, _NRI, _srcToken, _amount, _increment, _nu
     const token = new ethers.Contract(_srcToken, ERC20, _signer);
     let code, message, hash;
     let method = _increment ? "increaseAllowance" : "approve";
-    await token[method](_NRI, _amount)
+    let gasLimit = await getGasLimit(token, method, [_NRI, _amount])
+    await token[method](_NRI, _amount,{
+        gasLimit: gasLimit
+    })
         .then(async function (tx) {
             code = 200;
             message = "success";
