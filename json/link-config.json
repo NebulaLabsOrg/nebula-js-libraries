@@ -13,9 +13,9 @@
         "neon": {
             "name": "Neon",
             "url": {
-                "home":"",
-                "howTo":"",
-                "values": ""
+                "home":"https://nkson-protocol.gitbook.io/neon-protocol/",
+                "howTo":"https://nkson-protocol.gitbook.io/neon-protocol/how-to/create-dca",
+                "values": "https://nkson-protocol.gitbook.io/neon-protocol/features/core-value"
             }
         },
         "nebulas": {

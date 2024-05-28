@@ -86,6 +86,7 @@
 		"decimal": 18,
 		"rpc": [
 			"https://bsc-dataseed.bnbchain.org",
+			"https://bsc-dataseed1.bnbchain.org",
 			"https://bsc-dataseed2.bnbchain.org",
 			"https://bsc-dataseed3.bnbchain.org"
 		],
@@ -93,8 +94,8 @@
 		"dca": {
 			"resolver": "0xD424B4d1361430ed778D38C43A27777Aa7ea4749",
 			"NDB": "",
-			"NUI": "0x8048FE5c78A6FEF0686EbdFF1792Ea66D33ee7Ab",
-			"NRI": "0xDD32865492db1Bc96C7eD90708378dEAEE537BdF"
+			"NUI": "0xFDC6C8FC2ce8d27234f3a659829AAc747654FB02",
+			"NRI": "0xB02063b3cb10ae49C658350B53714CC1D75c4d96"
 		}
 	},
 	"100": {
@@ -144,8 +145,9 @@
 		"nativeCoin": "FTM",
 		"decimal": 18,
 		"rpc": [
-			"https://1rpc.io/ftm",
+			"https://rpc.fantom.network",
 			"https://rpcapi.fantom.network",
+			"https://fantom-pokt.nodies.app",
 			"https://fantom-rpc.publicnode.com"
 		],
 		"blockScan": "https://ftmscan.com/",
@@ -165,9 +167,9 @@
 		"nativeCoin": "ETH",
 		"decimal": 18,
 		"rpc": [
+			"https://zksync-mainnet.g.alchemy.com/v2",
 			"https://mainnet.era.zksync.io",
-			"https://1rpc.io/zksync2-era",
-			"wss://zksync.drpc.org"
+			"https://1rpc.io/zksync2-era"
 		],
 		"blockScan": "https://explorer.zksync.io/",
 		"dca": {
@@ -226,14 +228,15 @@
 		"rpc": [
 			"https://rpc.mantle.xyz",
 			"https://1rpc.io/mantle",
-			"https://mantle.drpc.org"
+			"https://mantle.drpc.org",
+			"https://rpc.ankr.com/mantle"
 		],
 		"blockScan": "https://explorer.mantle.xyz/",
 		"dca": {
 			"resolver": "0x061aa070B50513c3C34E5b1abf3Fc3d3Ea6033c8",
 			"NDB": "",
-			"NUI": "0x75a8Cb7bF61447dDACaeFdD75ceAaa5d9DED6Ff1",
-			"NRI": "0x43E0e2cE76CD17D78b75F77671bBd0E355C54D64"
+			"NUI": "0xf50f049E335062aF5bbd231956202304878F5aD3",
+			"NRI": "0x1Be8757712A616Fd8eda239A4C0A28343DC2005d"
 		}
 	},
 	"8453": {
@@ -245,16 +248,17 @@
 		"nativeCoin": "ETH",
 		"decimal": 18,
 		"rpc": [
+			"https://base-mainnet.g.alchemy.com/v2",
+			"https://mainnet.base.org",
 			"https://1rpc.io/base",
-			"wss://base-rpc.publicnode.com",
 			"https://base-rpc.publicnode.com"
 		],
 		"blockScan": "https://base.blockscout.com/",
 		"dca": {
 			"resolver": "0x5E435B0B56aB36b795f14ab8Ee965b8199dD7fc2",
 			"NDB": "",
-			"NUI": "0x1cF7569A09D944F8D70F896b35458193b73f301D",
-			"NRI": "0xaAcE01DE0841520B8aDb28B8b7f167fb10C91712"
+			"NUI": "0x43E0e2cE76CD17D78b75F77671bBd0E355C54D64",
+			"NRI": "0xEdc1dD48E67Fc829AEFcE98377BF2eFb862734e5"
 		}
 	},
 	"34443": {
@@ -267,15 +271,14 @@
 		"decimal": 18,
 		"rpc": [
 			"https://1rpc.io/mode",
-			"https://mainnet.mode.network",
-			"wss://mode.drpc.org"
+			"https://mainnet.mode.network"
 		],
 		"blockScan": "https://modescan.io/",
 		"dca": {
 			"resolver": "0x9f8Ef82473b66Ba320c92FF81A950Ce430Ba386c",
 			"NDB": "",
-			"NUI": "0x900180c4C7Ad0d44A4Aec4Fda4eD17CF02c34B2c",
-			"NRI": "0x0A612F211EddEc4AbE42a7716EFcC23b83a62A1e"
+			"NUI": "",
+			"NRI": ""
 		}
 	},
 	"42161": {
@@ -287,16 +290,17 @@
 		"nativeCoin": "ETH",
 		"decimal": 18,
 		"rpc": [
+			"https://arb-mainnet.g.alchemy.com/v2",
 			"https://arb-pokt.nodies.app",
 			"https://1rpc.io/arb",
-			"wss://arbitrum-one-rpc.publicnode.com"
+			"https://arbitrum.llamarpc.com"
 		],
 		"blockScan": "https://arbiscan.io/",
 		"dca": {
 			"resolver": "0x5cD40e7Ad842F2d5E88BC0a62701ecf2c0Cdc5E1",
 			"NDB": "",
-			"NUI": "0xb159D46b4deC5954460B40Db729f0EA40bDAae95",
-			"NRI": "0x3ceD5ae2328Caf124CF40F5788911C0620C52f32"
+			"NUI": "0xaCA91b93Cc8eA72415a49DB6aCc7DA296A218613",
+			"NRI": "0x5a0235adfbd6106121d5A908726e73E9a6A7f6cA"
 		}
 	},
 	"42220": {
@@ -348,14 +352,15 @@
 		"rpc": [
 			"https://rpc.linea.build",
 			"https://linea.drpc.org",
-			"https://linea.blockpi.network/v1/rpc/public"
+			"https://linea.blockpi.network/v1/rpc/public",
+			"https://1rpc.io/linea"
 		],
 		"blockScan": "https://lineascan.build/",
 		"dca": {
 			"resolver": "0xf6Bc71f9cd6b009cF6EA1F4008ed4151d740362d",
 			"NDB": "",
-			"NUI": "0x653d1F69B7e1eCf723683817C61580F8EeD1Cc92",
-			"NRI": "0xa0103b003cC78d1f08F14593661d47A996a57390"
+			"NUI": "0x1cF7569A09D944F8D70F896b35458193b73f301D",
+			"NRI": "0xaAcE01DE0841520B8aDb28B8b7f167fb10C91712"
 		}
 	},
 	"81457": {
@@ -369,14 +374,15 @@
 		"rpc": [
 			"https://rpc.blast.io",
 			"https://rpc.ankr.com/blast",
-			"https://blast.blockpi.network/v1/rpc/public"
+			"https://blast.blockpi.network/v1/rpc/public",
+			"https://rpc.envelop.is/blast"
 		],
 		"blockScan": "https://blastscan.io/",
 		"dca": {
 			"resolver": "0x8488e9BFD06f87E2A80BBc6dc72b8AE2639595d6",
 			"NDB": "",
-			"NUI": "0x900180c4C7Ad0d44A4Aec4Fda4eD17CF02c34B2c",
-			"NRI": "0x0A612F211EddEc4AbE42a7716EFcC23b83a62A1e"
+			"NUI": "0x2264555F9c31108032577cde806959e33C1D4387",
+			"NRI": "0xa2DaffbbA57a096567CE107A597813D245f7398a"
 		}
 	},
 	"534352": {
@@ -389,15 +395,16 @@
 		"decimal": 18,
 		"rpc": [
 			"https://scroll.drpc.org",
-			"https://scroll.drpc.org",
-			"https://rpc.scroll.io"
+			"https://1rpc.io/scroll",
+			"https://rpc.scroll.io",
+			"https://scroll.blockpi.network/v1/rpc/public"
 		],
 		"blockScan": "https://blockscout.scroll.io/",
 		"dca": {
 			"resolver": "0xc2eA7A1317B53541E12F85696A6614c8675Cd3c0",
 			"NDB": "",
-			"NUI": "0x0A612F211EddEc4AbE42a7716EFcC23b83a62A1e",
-			"NRI": "0x75F4c0008624AE44581F1783eA9641fb69196dB5"
+			"NUI": "0xa2DaffbbA57a096567CE107A597813D245f7398a",
+			"NRI": "0xf0314F761f5bd3f41daEEd6e0C5F2eC34B9Be6Ff"
 		}
 	},
 	"245022934": {
