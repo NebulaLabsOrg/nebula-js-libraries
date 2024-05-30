@@ -43,7 +43,7 @@ function conversionNeon(_srcONdst, _limitOrderVal, _srcAmount) {
  */
 function check(_limitOrderVal, _srcAmount, _dstQuote){
     let ratio = _dstQuote / _srcAmount
-    return {ratioLimit: _limitOrderVal, ratioSwap: ratio, canSwap: _limitOrderVal <= ratio}
+    return {ratioLimit: _limitOrderVal, ratioSwap: ratio, canSwap: _limitOrderVal >= ratio}
 }
 
 
