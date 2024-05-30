@@ -42,7 +42,7 @@ function conversionNeon(_srcONdst, _limitOrderVal, _srcAmount) {
     @param {number} _dstQuote       - Destination token quotation (in token)
  */
 function check(_limitOrderVal, _srcAmount, _dstQuote){
-    let ratio = _dstQuote / _srcAmount
+    let ratio = _srcAmount / _dstQuote;
     return {ratioLimit: _limitOrderVal, ratioSwap: ratio, canSwap: _limitOrderVal >= ratio}
 }
 
