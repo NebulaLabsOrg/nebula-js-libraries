@@ -175,7 +175,7 @@
 		}
 	},
 	"324": {
-		"en": true,
+		"en": false,
 		"hexID": "0x144",
 		"ID": 324,
 		"name": "zkSync Era",
