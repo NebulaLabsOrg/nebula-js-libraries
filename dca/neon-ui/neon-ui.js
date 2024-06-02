@@ -305,20 +305,22 @@ async function getDcaDetail(_signer, _NUI, _indentifier) {
  *
  * @param {Object} _signer - Ethers object.
  * @param {string} _NDB - NDB address.
- * @param {string} _indentifier - Identifier of the DCA contract.
+ * @param {string} _owner - Owner address.
+ * @param {string} _srcToken - Source token address.
+ * @param {string} _dstToken - Destination token address.
  * @param {number} _dcaCreationDate - Creation date of the DCA contract in seconds.
  * @returns {Promise<Object>} - An object containing the code, message, and data.
  */
-async function getDcaExecutionData(_signer, _NDB, _indentifier, _dcaCreationDate) {
+async function getDcaExecutionData(_signer, _NDB, _owner, _srcAmount, _dstToken, _dcaCreationDate) {
     const contract = new ethers.Contract(_NDB, NDB, _signer);
     let code, message, data;
-    await contract.getAmountStoredData(_indentifier, _dcaCreationDate)
+    await contract.getAmountStoredData(_owner, _srcAmount, _dstToken, _dcaCreationDate)
         .then(async function (response) {
             code = 200;
             message = "success";
             data = [];
-            if (response.toString() != 0) {
-                await contract.getStoredExecutionData(_indentifier, _dcaCreationDate, response)
+            if (!response.isZero()) {
+                await contract.getStoredExecutionData(_owner, _srcAmount, _dstToken, _dcaCreationDate, response)
                     .then(async function (response) {
                         code = 200;
                         message = "success";
@@ -327,14 +329,14 @@ async function getDcaExecutionData(_signer, _NDB, _indentifier, _dcaCreationDate
                     .catch(function (error) {
                         code = 406;
                         message = error.message;
-                        data = "nd";
+                        data = [];
                     });
             }
         })
         .catch(function (error) {
             code = 406;
             message = error.message;
-            data = "nd";
+            data = [];
         });
     return { code: code, message: message, data: data }
 }

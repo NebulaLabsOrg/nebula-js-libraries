@@ -12,7 +12,7 @@ let result = await neon.storeExecutionData(
     [process.env.DSTTOKEN],
     [ethers.utils.parseUnits("2", 18)], //Amount
     [2], //Value
-    6,
+    "6",
     2
 );
 console.log(result);

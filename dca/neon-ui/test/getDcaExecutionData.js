@@ -11,8 +11,10 @@ console.log(`Identifier: ${result.data[0].identifier}, CreationDate: ${result.da
 let result2 = await neon.getDcaExecutionData(
     signer,
     process.env.NDB,
-    result.data[0].identifier,
-    result.data[0].dateCreation
+    signer.address,
+    process.env.SRCTOKEN,
+    process.env.DSTTOKEN,
+    1
 );
 console.log(result2);
 console.log(result2.data[0]);

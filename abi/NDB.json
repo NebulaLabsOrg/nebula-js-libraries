@@ -56,9 +56,19 @@
     {
         "inputs": [
             {
-                "internalType": "bytes32",
-                "name": "_identifier",
-                "type": "bytes32"
+                "internalType": "address",
+                "name": "_owner",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_srcToken",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_dstToken",
+                "type": "address"
             },
             {
                 "internalType": "uint256",
@@ -80,9 +90,19 @@
     {
         "inputs": [
             {
-                "internalType": "bytes32",
-                "name": "_identifier",
-                "type": "bytes32"
+                "internalType": "address",
+                "name": "_owner",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_srcToken",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_dstToken",
+                "type": "address"
             },
             {
                 "internalType": "uint256",
