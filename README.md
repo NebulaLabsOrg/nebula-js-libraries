@@ -22,34 +22,6 @@
     <br />
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#library-lists">Getting Started</a>
-      <ul>
-        <li><a href="#abi">ABI</a></li>
-        <li><a href="#connection">Connection</a></li>
-        <li><a href="#data">Data</a></li>
-        <li><a href="#dex">Dex</a></li>
-        <li><a href="#interfaces">Interfaces</a></li>
-        <li><a href="#json">Json</a></li>
-        <li><a href="#utils">Utils</a></li>
-      </ul>
-    </li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -60,92 +32,65 @@ Simple and easy to use API interface for Defillama API to get Price and chart fo
 
 <!-- GETTING STARTED -->
 ## Library lists
+
 Open each library to see all the detailed purposes and functions details.
 
 ### ABI
 
-Section dedicated to ABI for contracts interfaces, below the full list:
-* ---
-  ```sh
-  Coming soon
-  ```
+Ready-to-use ABI packages
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-### Connection
-
-Section dedicated to connection for web3, below the full list:
-* ---
-  ```sh
-  Coming soon
-  ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+- `ERC20`
+- `NDB`
+- `NRI`
+- `NUI`
 
 ### Data
 
-Section dedicated to interfaces for collecting data, below the full list:
-* Coingecko API Interface for price fetch of tokens: 
-  [coingecko-api-interface](https://github.com/NEONdAPP/neon-libraries/data/coingecko-api-interface)
-* Defillama API Interface for price fetch of tokens: 
-  [defillama-api-interface](https://github.com/NEONdAPP/neon-libraries/data/defillama-api-interface)
+API interfaces for token data acquisition
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- `Coingecko`
+- `Defillama`
 
+### Dca
 
-### Dex
+Web3 interface for DCA contracts
 
-Section dedicated to interface to dexes, below the full list:
-* ---
-  ```sh
-  Coming soon
-  ```
+- `Neon`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### DEX Aggregator
 
+API interfaces for dex aggregator (Backend)
 
-### Interfaces
+- `0x`
+- `Kyberswap`
+- `Paraswap`
+- `xy`
 
-Section dedicated to specific contract interfaces and functions management, below the full list:
-* ---
-  ```sh
-  Coming soon
-  ```
+### Functions
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Generic features
 
+- `Limit Order - Frontend`
 
 ### Json
 
-Section dedicated to configuration json, below the full list:
-* ---
-  ```sh
-  Coming soon
-  ```
+Configurations
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- `app-code`
+- `chain-info`
+- `link-config`
+- `token-listed`
+- `tx-code`
 
+### Resources
 
-### Utils
+Assets
 
-Section dedicated to utilities Javascript functions, below the full list:
-* ---
-  ```sh
-  Coming soon
-  ```
+### Standard
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Web3 interface for ERC standards
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+- `ERC20`
 
 
 <!-- CONTACT -->
