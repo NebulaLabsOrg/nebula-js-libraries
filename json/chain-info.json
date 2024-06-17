@@ -1,6 +1,6 @@
 {
 	"11155111": {
-		"en": false,
+		"en": true,
 		"hexID": "0xaa36a7",
 		"ID": 11155111,
 		"name": "Sepolia",
