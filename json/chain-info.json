@@ -14,6 +14,10 @@
 			"https://gateway.tenderly.co/public/sepolia"
 		],
 		"blockScan": "https://sepolia.etherscan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "0xf321631DB68BA479b053499E4983D3994c1d0ED7",
@@ -22,7 +26,7 @@
 		}
 	},
 	"1": {
-		"en": false,
+		"en": true,
 		"hexID": "0x1",
 		"ID": 1,
 		"name": "Ethereum",
@@ -39,6 +43,10 @@
 			"https://rpc.mevblocker.io"
 		],
 		"blockScan": "https://etherscan.io/",
+		"settings":{
+			"minSwap": 2000,
+			"gasLimit": 17
+		},
 		"dca": {
 			"resolver": "0x3Bb2479603143D58B86854Fb466A492cEa7D85fa",
 			"NDB": "",
@@ -60,6 +68,10 @@
 			"https://optimism-mainnet.infura.io"
 		],
 		"blockScan": "https://optimistic.etherscan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -81,6 +93,10 @@
 			"https://cronos.blockpi.network/v1/rpc/public"
 		],
 		"blockScan": "https://cronoscan.com/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -105,6 +121,10 @@
 			"https://bsc-dataseed3.bnbchain.org"
 		],
 		"blockScan": "https://bscscan.com/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0xD424B4d1361430ed778D38C43A27777Aa7ea4749",
 			"NDB": "",
@@ -126,6 +146,10 @@
 			"https://rpc.gnosischain.com"
 		],
 		"blockScan": "https://gnosisscan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -147,6 +171,10 @@
 			"https://polygon-rpc.com/"
 		],
 		"blockScan": "https://polygonscan.com/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -171,6 +199,10 @@
 			"https://fantom-rpc.publicnode.com"
 		],
 		"blockScan": "https://ftmscan.com/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "0x75a8Cb7bF61447dDACaeFdD75ceAaa5d9DED6Ff1",
@@ -194,6 +226,10 @@
 			"https://1rpc.io/zksync2-era"
 		],
 		"blockScan": "https://explorer.zksync.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0xf4aa9E0c00c22908c6E2941C5d481ef85bcb0e85",
 			"NDB": "",
@@ -215,6 +251,10 @@
 			"https://zkevm-rpc.com"
 		],
 		"blockScan": "https://zkevm.polygonscan.com/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -236,6 +276,10 @@
 			"wss://moonriver.unitedbloc.com:2001"
 		],
 		"blockScan": "https://moonriver.moonscan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -260,6 +304,10 @@
 			"https://rpc.ankr.com/mantle"
 		],
 		"blockScan": "https://explorer.mantle.xyz/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0x061aa070B50513c3C34E5b1abf3Fc3d3Ea6033c8",
 			"NDB": "",
@@ -284,6 +332,10 @@
 			"https://base-rpc.publicnode.com"
 		],
 		"blockScan": "https://base.blockscout.com/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0x5E435B0B56aB36b795f14ab8Ee965b8199dD7fc2",
 			"NDB": "",
@@ -306,6 +358,10 @@
 			"https://mainnet.mode.network"
 		],
 		"blockScan": "https://modescan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0x9f8Ef82473b66Ba320c92FF81A950Ce430Ba386c",
 			"NDB": "",
@@ -330,6 +386,10 @@
 			"https://arbitrum-one-rpc.publicnode.com"
 		],
 		"blockScan": "https://arbiscan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0x5cD40e7Ad842F2d5E88BC0a62701ecf2c0Cdc5E1",
 			"NDB": "",
@@ -351,6 +411,10 @@
 			"https://forno.celo.org"
 		],
 		"blockScan": "https://celoscan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -372,6 +436,10 @@
 			"https://avalanche.blockpi.network/v1/rpc/public"
 		],
 		"blockScan": "https://snowtrace.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
@@ -396,6 +464,10 @@
 			"https://1rpc.io/linea"
 		],
 		"blockScan": "https://lineascan.build/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0xf6Bc71f9cd6b009cF6EA1F4008ed4151d740362d",
 			"NDB": "",
@@ -420,6 +492,10 @@
 			"https://rpc.envelop.is/blast"
 		],
 		"blockScan": "https://blastscan.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0x8488e9BFD06f87E2A80BBc6dc72b8AE2639595d6",
 			"NDB": "",
@@ -444,6 +520,10 @@
 			"https://scroll.blockpi.network/v1/rpc/public"
 		],
 		"blockScan": "https://blockscout.scroll.io/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "0xc2eA7A1317B53541E12F85696A6614c8675Cd3c0",
 			"NDB": "",
@@ -465,6 +545,10 @@
 			"https://neon-proxy-mainnet.solana.p2p.org"
 		],
 		"blockScan": "https://neonscan.org/",
+		"settings":{
+			"minSwap": 50,
+			"gasLimit": 0
+		},
 		"dca": {
 			"resolver": "",
 			"NDB": "",
