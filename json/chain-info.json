@@ -32,14 +32,18 @@
 		"confirmation": 2,
 		"pubRPC": "https://ethereum-rpc.publicnode.com",
 		"rpc": [
-			"https://eth.llamarpc.com"
+			"https://eth.llamarpc.com",
+			"https://ethereum-rpc.publicnode.com",
+			"https://1rpc.io/eth",
+			"https://eth-pokt.nodies.app",
+			"https://rpc.mevblocker.io"
 		],
 		"blockScan": "https://etherscan.io/",
 		"dca": {
-			"resolver": "",
+			"resolver": "0x3Bb2479603143D58B86854Fb466A492cEa7D85fa",
 			"NDB": "",
-			"NUI": "",
-			"NRI": ""
+			"NUI": "0xAab9a750F02016f56F8127c2caDa50eE878fb176",
+			"NRI": "0x900180c4C7Ad0d44A4Aec4Fda4eD17CF02c34B2c"
 		}
 	},
 	"10": {
@@ -274,7 +278,7 @@
 		"confirmation": 2,
 		"pubRPC": "https://base-rpc.publicnode.com",
 		"rpc": [
-			"https://base-mainnet.g.alchemy.com/v2",
+			"https://base.llamarpc.com",
 			"https://mainnet.base.org",
 			"https://1rpc.io/base",
 			"https://base-rpc.publicnode.com"
@@ -320,10 +324,10 @@
 		"confirmation": 2,
 		"pubRPC": "https://arbitrum-one-rpc.publicnode.com",
 		"rpc": [
-			"https://arb-mainnet.g.alchemy.com/v2",
 			"https://arb-pokt.nodies.app",
 			"https://1rpc.io/arb",
-			"https://arbitrum.llamarpc.com"
+			"https://arbitrum.llamarpc.com",
+			"https://arbitrum-one-rpc.publicnode.com"
 		],
 		"blockScan": "https://arbiscan.io/",
 		"dca": {
