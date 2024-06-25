@@ -6,6 +6,38 @@
 			{"label": "USDT", "address": "0xA017f466Be60e67d4bd2018d9F540F45DDc6164F", "img": "USDT", "description": "Tether Sepolia"}
 		]
 	},
+	"1": {
+		"name": "Ethereum",
+        "token":[
+			{"label": "ezETH", "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110", "img": "ezETH", "description": "Renzo Restaked ETH"},
+			{"label": "weETH", "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee", "img": "weETH", "description": "Wrapped eETH"},
+			{"label": "BANANA", "address": "0x38E68A37E401F7271568CecaAc63c6B1e19130B4", "img": "BANANA", "description": "Banana Gun"},
+			{"label": "WETH", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "img": "WETH", "description": "Wrapped ETH"},
+			{"label": "WBTC", "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "img": "WBTC", "description": "Wrapped Bitcoin"},
+			{"label": "PEPE", "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933", "img": "PEPE", "description": "Pepe"},
+			{"label": "LINK", "address": "0x514910771af9ca656af840dff83e8264ecf986ca", "img": "LINK", "description": "Chainlink"},
+			{"label": "ONDO", "address": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3", "img": "ONDO", "description": "Ondo"},
+			{"label": "TRUMP", "address": "0x576e2bed8f7b46d34016198911cdf9886f78bea7", "img": "TRUMP", "description": "MAGA"},
+			{"label": "ENA", "address": "0x57e114b691db790c35207b2e685d4a43181e6061", "img": "ENA", "description": "Ethena"},
+			{"label": "stETH", "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84", "img": "STETH", "description": "Lido Staked Ether"},
+			{"label": "USDT", "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7", "img": "USDT", "description": "Tether"},
+			{"label": "USDC", "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", "img": "USDC", "description": "USDC"},
+			{"label": "WTON", "address": "0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1", "img": "TON", "description": "Wrapped Toncoin"},
+			{"label": "UNI", "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984", "img": "UNI", "description": "Uniswap"},
+			{"label": "RNDR", "address": "0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24", "img": "RNDR", "description": "Render"},
+			{"label": "IMX", "address": "0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF", "img": "IMX", "description": "Immutable"},
+			{"label": "MKR", "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2", "img": "MKR", "description": "Maker"},
+			{"label": "LDO", "address": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32", "img": "LDO", "description": "Lido DAO"},
+			{"label": "PENDLE", "address": "0x808507121B80c02388fAd14726482e061B8da827", "img": "PENDLE", "description": "Pendle"},
+			{"label": "BEAM", "address": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE", "img": "BEAM", "description": "Beam"},
+			{"label": "SNX", "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f", "img": "SNX", "description": "Synthetix Network"},
+			{"label": "W", "address": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91", "img": "W", "description": "Wormhole"},
+			{"label": "XAUT", "address": "0x68749665ff8d2d112fa859aa293f07a622782f38", "img": "XAUT", "description": "Tether Gold"},
+			{"label": "CRV", "address": "0xd533a949740bb3306d119cc777fa900ba034cd52", "img": "CRV", "description": "Curve DAO"},
+			{"label": "ARKM", "address": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050", "img": "ARKM", "description": "Arkham"},
+			{"label": "SSV", "address": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54", "img": "SSV", "description": "SSV Network"}
+		]
+	},
 	"56": {
 		"name": "Binance",
         "token":[
@@ -15,7 +47,7 @@
 			{"label": "BTCB", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "img": "BTCB", "description": "Binance Bitcoin"},
 			{"label": "CAKE", "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", "img": "CAKE", "description": "PancakeSwap"},
 			{"label": "DOGE", "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43", "img": "DOGE", "description": "Dogecoin"},
-			{"label": "TON", "address": "0x76a797a59ba2c17726896976b7b3747bfd1d220f", "img": "TON", "description": "Toncoin"},
+			{"label": "WTON", "address": "0x76a797a59ba2c17726896976b7b3747bfd1d220f", "img": "TON", "description": "Wrapped Toncoin"},
 			{"label": "USDC", "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "img": "USDC", "description": "USDC"},
 			{"label": "NMT", "address": "0x03AA6298F1370642642415EDC0db8b957783e8D6", "img": "NMT", "description": "NetMind Token"},
 			{"label": "SOL", "address": "0x570A5D26f7765Ecb712C0924E4De545B89fD43dF", "img": "SOL", "description": "Solana"},
@@ -56,7 +88,10 @@
 			{"label": "PRIME", "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b", "img": "PRIME", "description": "Echelon Prime"},
 			{"label": "WETH", "address": "0x4200000000000000000000000000000000000006", "img": "WETH", "description": "Wrapped ETH"},
 			{"label": "USDbC", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "img": "USDbC", "description": "USD Base Coin"},
-			{"label": "USDC", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "img": "USDC", "description": "USDC"}
+			{"label": "USDC", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "img": "USDC", "description": "USDC"},
+			{"label": "BRETT", "address": "0x532f27101965dd16442e59d40670faf5ebb142e4", "img": "BRETT", "description": "Brett"},
+			{"label": "TOSHI", "address": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4", "img": "TOSHI", "description": "Toshi"},
+			{"label": "BENJI", "address": "0xbc45647ea894030a4e9801ec03479739fa2485f0", "img": "BENJI", "description": "Basenji"}
 		]
 	},
 	"42161": {
@@ -78,7 +113,12 @@
 			{"label": "BPET", "address": "0x6dAF586B7370B14163171544fca24AbcC0862ac5", "img": "BPET", "description": "xPet.tech"},
 			{"label": "LDO", "address": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66", "img": "LDO", "description": "Lido DAO"},
 			{"label": "USDC", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "img": "USDC", "description": "USDC"},
-			{"label": "USDC.e", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "img": "USDC", "description": "USDC (Bridged)"}
+			{"label": "USDC.e", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "img": "USDC", "description": "USDC (Bridged)"},
+			{"label": "RDNT", "address": "0x3082cc23568ea640225c2467653db90e9250aaa0", "img": "RDNT", "description": "Radiant Capital"},
+			{"label": "TAP", "address": "0x2c650dab03a59332e2e0c0c4a7f726913e5028c1", "img": "TAP", "description": "Tapioca DAO"},
+			{"label": "PNP", "address": "0x2ac2b254bc18cd4999f64773a966e4f4869c34ee", "img": "PNP", "description": "Penpie"},
+			{"label": "DMT", "address": "0x8b0e6f19ee57089f7649a455d89d7bc6314d04e8", "img": "DMT", "description": "Dream Machine"},
+			{"label": "ZRO", "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd", "img": "ZRO", "description": "LayerZero"}
 		]
 	},
 	"59144": {
@@ -90,7 +130,9 @@
 			{"label": "ezETH", "address": "0x2416092f143378750bb29b79eD961ab195CcEea5", "img": "ezETH", "description": "Renzo Restaked ETH"},
 			{"label": "wrsETH", "address": "0xD2671165570f41BBB3B0097893300b6EB6101E6C", "img": "wrsETH", "description": "Wrapped rsETH"},
 			{"label": "weETH", "address": "0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6", "img": "weETH", "description": "Wrapped eETH"},
-			{"label": "WBTC", "address": "0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4", "img": "WBTC", "description": "Wrapped Bitcoin"}
+			{"label": "WBTC", "address": "0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4", "img": "WBTC", "description": "Wrapped Bitcoin"},
+			{"label": "NILE", "address": "0xaaaac83751090c6ea42379626435f805ddf54dc8", "img": "NILE", "description": "Nile"},
+			{"label": "LYNX", "address": "0x1a51b19ce03dbe0cb44c1528e34a7edd7771e9af", "img": "LYNX", "description": "Lynex"}
 		]
 	},
 	"81457": {
@@ -111,7 +153,9 @@
 			{"label": "WETH", "address": "0x5300000000000000000000000000000000000004", "img": "WETH", "description": "Wrapped ETH"},
 			{"label": "USDC", "address": "0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4", "img": "USDC", "description": "USDC"},
 			{"label": "USDT", "address": "0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df", "img": "USDT", "description": "Tether"},
-			{"label": "WBTC", "address": "0x3C1BCa5a656e69edCD0D4E36BEbb3FcDAcA60Cf1", "img": "WBTC", "description": "Wrapped Bitcoin"}
+			{"label": "WBTC", "address": "0x3C1BCa5a656e69edCD0D4E36BEbb3FcDAcA60Cf1", "img": "WBTC", "description": "Wrapped Bitcoin"},
+			{"label": "STONE", "address": "0x80137510979822322193fc997d400d5a6c747bf7", "img": "STONE", "description": "StakeStone ETH"},
+			{"label": "weETH", "address": "0x01f0a31698c4d065659b9bdc21b3610292a1c506", "img": "weETH", "description": "Wrapped eETH"}
 		]
     }
 }
