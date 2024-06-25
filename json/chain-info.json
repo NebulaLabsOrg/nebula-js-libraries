@@ -16,7 +16,7 @@
 		"blockScan": "https://sepolia.etherscan.io/",
 		"settings":{
 			"minSwap": 50,
-			"gasLimit": 0
+			"gasLimit": 27
 		},
 		"dca": {
 			"resolver": "",
