@@ -69,7 +69,12 @@ async function getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken) {
  * @returns {Promise<Object>} - An object containing the code, message, and data.
  */
 async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _dstToken, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
-    const web3 = new Web3(_rpc);
+    const web3 = new Web3({
+        provider: _rpc,
+        config: {
+            transactionConfirmationBlocks: parseInt(_numberConfirmation)
+        }
+    });
     //GetRoute
     let route = await getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken);
     if (route.code != 200) {
