@@ -15,6 +15,7 @@
 		],
 		"blockScan": "https://sepolia.etherscan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 27
 		},
@@ -44,6 +45,7 @@
 		],
 		"blockScan": "https://etherscan.io/",
 		"settings":{
+			"isNew": true,
 			"minSwap": 2000,
 			"gasLimit": 17
 		},
@@ -69,6 +71,7 @@
 		],
 		"blockScan": "https://optimistic.etherscan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -94,6 +97,7 @@
 		],
 		"blockScan": "https://cronoscan.com/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -122,6 +126,7 @@
 		],
 		"blockScan": "https://bscscan.com/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -147,6 +152,7 @@
 		],
 		"blockScan": "https://gnosisscan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -172,6 +178,7 @@
 		],
 		"blockScan": "https://polygonscan.com/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -200,6 +207,7 @@
 		],
 		"blockScan": "https://ftmscan.com/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -227,6 +235,7 @@
 		],
 		"blockScan": "https://explorer.zksync.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -252,6 +261,7 @@
 		],
 		"blockScan": "https://zkevm.polygonscan.com/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -277,6 +287,7 @@
 		],
 		"blockScan": "https://moonriver.moonscan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -305,6 +316,7 @@
 		],
 		"blockScan": "https://explorer.mantle.xyz/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -333,6 +345,7 @@
 		],
 		"blockScan": "https://base.blockscout.com/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -359,6 +372,7 @@
 		],
 		"blockScan": "https://modescan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -387,6 +401,7 @@
 		],
 		"blockScan": "https://arbiscan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -412,6 +427,7 @@
 		],
 		"blockScan": "https://celoscan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -437,6 +453,7 @@
 		],
 		"blockScan": "https://snowtrace.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -465,6 +482,7 @@
 		],
 		"blockScan": "https://lineascan.build/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -493,6 +511,7 @@
 		],
 		"blockScan": "https://blastscan.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -521,6 +540,7 @@
 		],
 		"blockScan": "https://blockscout.scroll.io/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
@@ -546,6 +566,7 @@
 		],
 		"blockScan": "https://neonscan.org/",
 		"settings":{
+			"isNew": false,
 			"minSwap": 50,
 			"gasLimit": 0
 		},
