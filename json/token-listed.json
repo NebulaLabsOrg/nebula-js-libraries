@@ -111,7 +111,7 @@
 			{"label": "RAM", "address": "0xAAA6C1E32C55A7Bfa8066A6FAE9b42650F262418", "img": "RAM", "description": "Ramses Exchange"},
 			{"label": "WOO", "address": "0xcAFcD85D8ca7Ad1e1C6F82F651fA15E33AEfD07b", "img": "WOO", "description": "WOO"},
 			{"label": "BPET", "address": "0x6dAF586B7370B14163171544fca24AbcC0862ac5", "img": "BPET", "description": "xPet.tech"},
-			{"label": "LDO", "address": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66", "img": "LDO", "description": "Lido DAO"},
+			{"label": "LDO", "address": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60", "img": "LDO", "description": "Lido DAO"},
 			{"label": "USDC", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "img": "USDC", "description": "USDC"},
 			{"label": "USDC.e", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "img": "USDC", "description": "USDC (Bridged)"},
 			{"label": "RDNT", "address": "0x3082cc23568ea640225c2467653db90e9250aaa0", "img": "RDNT", "description": "Radiant Capital"},
