@@ -119,6 +119,7 @@ async function backendApprove(_rpc, _prvKey, _token, _amount, _spender, _gasPric
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_token, ERC20, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     await contract.approve(_spender, _amount, {
         gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
     })

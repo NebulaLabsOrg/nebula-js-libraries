@@ -70,6 +70,7 @@ async function getRoute(_chainId, _srcToken, _srcAmount, _dstToken) {
  * @returns {Promise<Object>} - An object containing the code, message, and data.
  */
 async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _dstToken, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
+    if (_gasPrice == "0" || _gasPrice == "0.0") { swapData.code = 406; swapData.message = "GasPrice must be > 0"; return swapData; };
     const web3 = new Web3({
         provider: _rpc,
         config: {
@@ -164,6 +165,7 @@ async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _num
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc))
     const contract = new ethers.Contract(_token, ERC20, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     await contract.approve(_spender, _amount, {
         gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei")
     })
