@@ -11,7 +11,7 @@ let swapData = {
     approvalHash: "nd",
     swapHash: "nd",
     transferHash: "nd",
-    dstAmount: "nd",
+    dstAmount: "0",
     dstValue: "0"
 }
 
