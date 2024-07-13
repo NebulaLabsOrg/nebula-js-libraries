@@ -531,12 +531,11 @@
 		"nativeCoin": "ETH",
 		"decimal": 18,
 		"confirmation": 2,
-		"pubRPC": "https://scroll.blockpi.network/v1/rpc/public",
+		"pubRPC": "https://rpc.scroll.io",
 		"rpc": [
-			"https://scroll.drpc.org",
 			"https://1rpc.io/scroll",
 			"https://rpc.scroll.io",
-			"https://scroll.blockpi.network/v1/rpc/public"
+			"https://rpc.ankr.com/scroll"
 		],
 		"blockScan": "https://blockscout.scroll.io/",
 		"settings":{
