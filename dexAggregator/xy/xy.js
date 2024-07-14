@@ -4,16 +4,6 @@ import { instance } from "./src/config.js";
 import { axiosErrorHandler, xyRouteHandler, xySwapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 
-
-let swapData = {
-    code: 0,
-    message: "",
-    approvalHash: "nd",
-    swapHash: "nd",
-    dstAmount: "0",
-    dstValue: "0"
-}
-
 /**
  * Retrieves the route for swapping tokens.
  *
@@ -69,6 +59,14 @@ async function getRoute(_chainId, _slippage, _srcToken, _srcAmount, _dstToken) {
  * @returns {Promise<Object>} - An object containing the code, message, and data.
  */
 async function swap(_rpc, _prvKey, _chainId, _slippage, _srcToken, _srcAmount, _dstToken, _receiver, _gasPrice, _numberConfirmation, _delayForCheckTx) {
+    let swapData = {
+        code: 0,
+        message: "",
+        approvalHash: "nd",
+        swapHash: "nd",
+        dstAmount: "0",
+        dstValue: "0"
+    }
     if (_gasPrice == "0" || _gasPrice == "0.0") { swapData.code = 406; swapData.message = "GasPrice must be > 0"; return swapData; };
     const web3 = new Web3({
         provider: _rpc,
