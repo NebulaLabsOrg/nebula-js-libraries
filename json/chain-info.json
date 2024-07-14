@@ -13,9 +13,8 @@
 			"https://rpc2.sepolia.org",
 			"https://gateway.tenderly.co/public/sepolia"
 		],
-		"rpcWrite": [
-			"https://rpc2.sepolia.org",
-			"https://gateway.tenderly.co/public/sepolia"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://sepolia.etherscan.io/",
 		"settings":{
@@ -47,12 +46,8 @@
 			"https://eth-pokt.nodies.app",
 			"https://rpc.mevblocker.io"
 		],
-		"rpcWrite": [
-			"https://eth.llamarpc.com",
-			"https://ethereum-rpc.publicnode.com",
-			"https://1rpc.io/eth",
-			"https://eth-pokt.nodies.app",
-			"https://rpc.mevblocker.io"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://etherscan.io/",
 		"settings":{
@@ -80,8 +75,8 @@
 		"rpc": [
 			"https://optimism-mainnet.infura.io"
 		],
-		"rpcWrite": [
-			"https://optimism-mainnet.infura.io"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://optimistic.etherscan.io/",
 		"settings":{
@@ -109,8 +104,8 @@
 		"rpc": [
 			"https://cronos.blockpi.network/v1/rpc/public"
 		],
-		"rpcWrite": [
-			"https://cronos.blockpi.network/v1/rpc/public"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://cronoscan.com/",
 		"settings":{
@@ -141,11 +136,8 @@
 			"https://bsc-dataseed2.bnbchain.org",
 			"https://bsc-dataseed3.bnbchain.org"
 		],
-		"rpcWrite": [
-			"https://bsc-dataseed.bnbchain.org",
-			"https://bsc-dataseed1.bnbchain.org",
-			"https://bsc-dataseed2.bnbchain.org",
-			"https://bsc-dataseed3.bnbchain.org"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://bscscan.com/",
 		"settings":{
@@ -173,8 +165,8 @@
 		"rpc": [
 			"https://rpc.gnosischain.com"
 		],
-		"rpcWrite": [
-			"https://rpc.gnosischain.com"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://gnosisscan.io/",
 		"settings":{
@@ -202,8 +194,8 @@
 		"rpc": [
 			"https://polygon-rpc.com/"
 		],
-		"rpcWrite": [
-			"https://polygon-rpc.com/"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://polygonscan.com/",
 		"settings":{
@@ -234,11 +226,8 @@
 			"https://fantom-pokt.nodies.app",
 			"https://fantom-rpc.publicnode.com"
 		],
-		"rpcWrite": [
-			"https://rpc.fantom.network",
-			"https://rpcapi.fantom.network",
-			"https://fantom-pokt.nodies.app",
-			"https://fantom-rpc.publicnode.com"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://ftmscan.com/",
 		"settings":{
@@ -268,10 +257,8 @@
 			"https://mainnet.era.zksync.io",
 			"https://1rpc.io/zksync2-era"
 		],
-		"rpcWrite": [
-			"https://zksync-mainnet.g.alchemy.com/v2",
-			"https://mainnet.era.zksync.io",
-			"https://1rpc.io/zksync2-era"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://explorer.zksync.io/",
 		"settings":{
@@ -299,8 +286,8 @@
 		"rpc": [
 			"https://zkevm-rpc.com"
 		],
-		"rpcWrite": [
-			"https://zkevm-rpc.com"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://zkevm.polygonscan.com/",
 		"settings":{
@@ -328,8 +315,8 @@
 		"rpc": [
 			"wss://moonriver.unitedbloc.com:2001"
 		],
-		"rpcWrite": [
-			"wss://moonriver.unitedbloc.com:2001"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://moonriver.moonscan.io/",
 		"settings":{
@@ -360,11 +347,8 @@
 			"https://mantle.drpc.org",
 			"https://rpc.ankr.com/mantle"
 		],
-		"rpcWrite": [
-			"https://rpc.mantle.xyz",
-			"https://1rpc.io/mantle",
-			"https://mantle.drpc.org",
-			"https://rpc.ankr.com/mantle"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://explorer.mantle.xyz/",
 		"settings":{
@@ -395,11 +379,8 @@
 			"https://1rpc.io/base",
 			"https://base-rpc.publicnode.com"
 		],
-		"rpcWrite": [
-			"https://base.llamarpc.com",
-			"https://mainnet.base.org",
-			"https://1rpc.io/base",
-			"https://base-rpc.publicnode.com"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://base.blockscout.com/",
 		"settings":{
@@ -428,9 +409,8 @@
 			"https://1rpc.io/mode",
 			"https://mainnet.mode.network"
 		],
-		"rpcWrite": [
-			"https://1rpc.io/mode",
-			"https://mainnet.mode.network"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://modescan.io/",
 		"settings":{
@@ -461,11 +441,8 @@
 			"https://arbitrum.llamarpc.com",
 			"https://arbitrum-one-rpc.publicnode.com"
 		],
-		"rpcWrite": [
-			"https://arb-pokt.nodies.app",
-			"https://1rpc.io/arb",
-			"https://arbitrum.llamarpc.com",
-			"https://arbitrum-one-rpc.publicnode.com"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://arbiscan.io/",
 		"settings":{
@@ -493,8 +470,8 @@
 		"rpc": [
 			"https://forno.celo.org"
 		],
-		"rpcWrite": [
-			"https://forno.celo.org"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://celoscan.io/",
 		"settings":{
@@ -522,8 +499,8 @@
 		"rpc": [
 			"https://avalanche.blockpi.network/v1/rpc/public"
 		],
-		"rpcWrite": [
-			"https://avalanche.blockpi.network/v1/rpc/public"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://snowtrace.io/",
 		"settings":{
@@ -554,11 +531,8 @@
 			"https://linea.blockpi.network/v1/rpc/public",
 			"https://1rpc.io/linea"
 		],
-		"rpcWrite": [
-			"https://rpc.linea.build",
-			"https://linea.drpc.org",
-			"https://linea.blockpi.network/v1/rpc/public",
-			"https://1rpc.io/linea"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://lineascan.build/",
 		"settings":{
@@ -589,11 +563,8 @@
 			"https://blast.blockpi.network/v1/rpc/public",
 			"https://rpc.envelop.is/blast"
 		],
-		"rpcWrite": [
-			"https://rpc.blast.io",
-			"https://rpc.ankr.com/blast",
-			"https://blast.blockpi.network/v1/rpc/public",
-			"https://rpc.envelop.is/blast"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://blastscan.io/",
 		"settings":{
@@ -613,16 +584,17 @@
 		"hexID": "0x82750",
 		"ID": 534352,
 		"name": "Scroll",
-		"fullName": "Scroll Mainet",
+		"fullName": "Scroll Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
 		"confirmation": 2,
 		"pubRPC": "https://rpc.scroll.io",
 		"rpc": [
 			"https://1rpc.io/scroll",
-			"https://rpc.scroll.io"
+			"https://rpc.scroll.io",
+			"https://scroll-mainnet.public.blastapi.io"
 		],
-		"rpcWrite": [
+		"rpcPremium": [
 			"https://scroll-mainnet.blastapi.io"
 		],
 		"blockScan": "https://blockscout.scroll.io/",
@@ -651,8 +623,8 @@
 		"rpc": [
 			"https://neon-proxy-mainnet.solana.p2p.org"
 		],
-		"rpcWrite": [
-			"https://neon-proxy-mainnet.solana.p2p.org"
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://neonscan.org/",
 		"settings":{
