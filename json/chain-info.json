@@ -13,6 +13,10 @@
 			"https://rpc2.sepolia.org",
 			"https://gateway.tenderly.co/public/sepolia"
 		],
+		"rpcWrite": [
+			"https://rpc2.sepolia.org",
+			"https://gateway.tenderly.co/public/sepolia"
+		],
 		"blockScan": "https://sepolia.etherscan.io/",
 		"settings":{
 			"isNew": false,
@@ -37,6 +41,13 @@
 		"confirmation": 2,
 		"pubRPC": "https://ethereum-rpc.publicnode.com",
 		"rpc": [
+			"https://eth.llamarpc.com",
+			"https://ethereum-rpc.publicnode.com",
+			"https://1rpc.io/eth",
+			"https://eth-pokt.nodies.app",
+			"https://rpc.mevblocker.io"
+		],
+		"rpcWrite": [
 			"https://eth.llamarpc.com",
 			"https://ethereum-rpc.publicnode.com",
 			"https://1rpc.io/eth",
@@ -69,6 +80,9 @@
 		"rpc": [
 			"https://optimism-mainnet.infura.io"
 		],
+		"rpcWrite": [
+			"https://optimism-mainnet.infura.io"
+		],
 		"blockScan": "https://optimistic.etherscan.io/",
 		"settings":{
 			"isNew": false,
@@ -93,6 +107,9 @@
 		"confirmation": 2,
 		"pubRPC": "https://cronos-rpc.publicnode.com:443",
 		"rpc": [
+			"https://cronos.blockpi.network/v1/rpc/public"
+		],
+		"rpcWrite": [
 			"https://cronos.blockpi.network/v1/rpc/public"
 		],
 		"blockScan": "https://cronoscan.com/",
@@ -124,6 +141,12 @@
 			"https://bsc-dataseed2.bnbchain.org",
 			"https://bsc-dataseed3.bnbchain.org"
 		],
+		"rpcWrite": [
+			"https://bsc-dataseed.bnbchain.org",
+			"https://bsc-dataseed1.bnbchain.org",
+			"https://bsc-dataseed2.bnbchain.org",
+			"https://bsc-dataseed3.bnbchain.org"
+		],
 		"blockScan": "https://bscscan.com/",
 		"settings":{
 			"isNew": false,
@@ -148,6 +171,9 @@
 		"confirmation": 2,
 		"pubRPC": "https://gnosis-rpc.publicnode.com",
 		"rpc": [
+			"https://rpc.gnosischain.com"
+		],
+		"rpcWrite": [
 			"https://rpc.gnosischain.com"
 		],
 		"blockScan": "https://gnosisscan.io/",
@@ -176,6 +202,9 @@
 		"rpc": [
 			"https://polygon-rpc.com/"
 		],
+		"rpcWrite": [
+			"https://polygon-rpc.com/"
+		],
 		"blockScan": "https://polygonscan.com/",
 		"settings":{
 			"isNew": false,
@@ -200,6 +229,12 @@
 		"confirmation": 2,
 		"pubRPC": "https://fantom-rpc.publicnode.com",
 		"rpc": [
+			"https://rpc.fantom.network",
+			"https://rpcapi.fantom.network",
+			"https://fantom-pokt.nodies.app",
+			"https://fantom-rpc.publicnode.com"
+		],
+		"rpcWrite": [
 			"https://rpc.fantom.network",
 			"https://rpcapi.fantom.network",
 			"https://fantom-pokt.nodies.app",
@@ -233,6 +268,11 @@
 			"https://mainnet.era.zksync.io",
 			"https://1rpc.io/zksync2-era"
 		],
+		"rpcWrite": [
+			"https://zksync-mainnet.g.alchemy.com/v2",
+			"https://mainnet.era.zksync.io",
+			"https://1rpc.io/zksync2-era"
+		],
 		"blockScan": "https://explorer.zksync.io/",
 		"settings":{
 			"isNew": false,
@@ -257,6 +297,9 @@
 		"confirmation": 2,
 		"pubRPC": "https://polygon-zkevm.blockpi.network/v1/rpc/public",
 		"rpc": [
+			"https://zkevm-rpc.com"
+		],
+		"rpcWrite": [
 			"https://zkevm-rpc.com"
 		],
 		"blockScan": "https://zkevm.polygonscan.com/",
@@ -285,6 +328,9 @@
 		"rpc": [
 			"wss://moonriver.unitedbloc.com:2001"
 		],
+		"rpcWrite": [
+			"wss://moonriver.unitedbloc.com:2001"
+		],
 		"blockScan": "https://moonriver.moonscan.io/",
 		"settings":{
 			"isNew": false,
@@ -309,6 +355,12 @@
 		"confirmation": 2,
 		"pubRPC": "https://mantle-rpc.publicnode.com",
 		"rpc": [
+			"https://rpc.mantle.xyz",
+			"https://1rpc.io/mantle",
+			"https://mantle.drpc.org",
+			"https://rpc.ankr.com/mantle"
+		],
+		"rpcWrite": [
 			"https://rpc.mantle.xyz",
 			"https://1rpc.io/mantle",
 			"https://mantle.drpc.org",
@@ -343,6 +395,12 @@
 			"https://1rpc.io/base",
 			"https://base-rpc.publicnode.com"
 		],
+		"rpcWrite": [
+			"https://base.llamarpc.com",
+			"https://mainnet.base.org",
+			"https://1rpc.io/base",
+			"https://base-rpc.publicnode.com"
+		],
 		"blockScan": "https://base.blockscout.com/",
 		"settings":{
 			"isNew": false,
@@ -367,6 +425,10 @@
 		"confirmation": 2,
 		"pubRPC": "https://mainnet.mode.network",
 		"rpc": [
+			"https://1rpc.io/mode",
+			"https://mainnet.mode.network"
+		],
+		"rpcWrite": [
 			"https://1rpc.io/mode",
 			"https://mainnet.mode.network"
 		],
@@ -399,6 +461,12 @@
 			"https://arbitrum.llamarpc.com",
 			"https://arbitrum-one-rpc.publicnode.com"
 		],
+		"rpcWrite": [
+			"https://arb-pokt.nodies.app",
+			"https://1rpc.io/arb",
+			"https://arbitrum.llamarpc.com",
+			"https://arbitrum-one-rpc.publicnode.com"
+		],
 		"blockScan": "https://arbiscan.io/",
 		"settings":{
 			"isNew": false,
@@ -423,6 +491,9 @@
 		"confirmation": 2,
 		"pubRPC": "https://forno.celo.org",
 		"rpc": [
+			"https://forno.celo.org"
+		],
+		"rpcWrite": [
 			"https://forno.celo.org"
 		],
 		"blockScan": "https://celoscan.io/",
@@ -451,6 +522,9 @@
 		"rpc": [
 			"https://avalanche.blockpi.network/v1/rpc/public"
 		],
+		"rpcWrite": [
+			"https://avalanche.blockpi.network/v1/rpc/public"
+		],
 		"blockScan": "https://snowtrace.io/",
 		"settings":{
 			"isNew": false,
@@ -475,6 +549,12 @@
 		"confirmation": 2,
 		"pubRPC": "https://linea.blockpi.network/v1/rpc/public",
 		"rpc": [
+			"https://rpc.linea.build",
+			"https://linea.drpc.org",
+			"https://linea.blockpi.network/v1/rpc/public",
+			"https://1rpc.io/linea"
+		],
+		"rpcWrite": [
 			"https://rpc.linea.build",
 			"https://linea.drpc.org",
 			"https://linea.blockpi.network/v1/rpc/public",
@@ -509,6 +589,12 @@
 			"https://blast.blockpi.network/v1/rpc/public",
 			"https://rpc.envelop.is/blast"
 		],
+		"rpcWrite": [
+			"https://rpc.blast.io",
+			"https://rpc.ankr.com/blast",
+			"https://blast.blockpi.network/v1/rpc/public",
+			"https://rpc.envelop.is/blast"
+		],
 		"blockScan": "https://blastscan.io/",
 		"settings":{
 			"isNew": false,
@@ -534,8 +620,10 @@
 		"pubRPC": "https://rpc.scroll.io",
 		"rpc": [
 			"https://1rpc.io/scroll",
-			"https://rpc.scroll.io",
-			"https://rpc.ankr.com/scroll"
+			"https://rpc.scroll.io"
+		],
+		"rpcWrite": [
+			"https://scroll-mainnet.blastapi.io"
 		],
 		"blockScan": "https://blockscout.scroll.io/",
 		"settings":{
@@ -561,6 +649,9 @@
 		"confirmation": 2,
 		"pubRPC": "https://neon-proxy-mainnet.solana.p2p.org",
 		"rpc": [
+			"https://neon-proxy-mainnet.solana.p2p.org"
+		],
+		"rpcWrite": [
 			"https://neon-proxy-mainnet.solana.p2p.org"
 		],
 		"blockScan": "https://neonscan.org/",
