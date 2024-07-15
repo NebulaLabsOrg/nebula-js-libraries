@@ -592,7 +592,7 @@
 		"rpc": [
 			"https://1rpc.io/scroll",
 			"https://rpc.scroll.io",
-			"https://scroll-mainnet.public.blastapi.io"
+			"https://scroll.drpc.org"
 		],
 		"rpcPremium": [
 			"https://scroll-mainnet.blastapi.io"
