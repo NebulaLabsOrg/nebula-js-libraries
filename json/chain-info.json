@@ -13,6 +13,9 @@
 			"https://rpc2.sepolia.org",
 			"https://gateway.tenderly.co/public/sepolia"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://sepolia.etherscan.io/",
 		"settings":{
 			"isNew": false,
@@ -43,6 +46,9 @@
 			"https://eth-pokt.nodies.app",
 			"https://rpc.mevblocker.io"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://etherscan.io/",
 		"settings":{
 			"isNew": true,
@@ -69,6 +75,9 @@
 		"rpc": [
 			"https://optimism-mainnet.infura.io"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://optimistic.etherscan.io/",
 		"settings":{
 			"isNew": false,
@@ -94,6 +103,9 @@
 		"pubRPC": "https://cronos-rpc.publicnode.com:443",
 		"rpc": [
 			"https://cronos.blockpi.network/v1/rpc/public"
+		],
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://cronoscan.com/",
 		"settings":{
@@ -124,6 +136,9 @@
 			"https://bsc-dataseed2.bnbchain.org",
 			"https://bsc-dataseed3.bnbchain.org"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://bscscan.com/",
 		"settings":{
 			"isNew": false,
@@ -150,6 +165,9 @@
 		"rpc": [
 			"https://rpc.gnosischain.com"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://gnosisscan.io/",
 		"settings":{
 			"isNew": false,
@@ -175,6 +193,9 @@
 		"pubRPC": "https://polygon-bor-rpc.publicnode.com",
 		"rpc": [
 			"https://polygon-rpc.com/"
+		],
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://polygonscan.com/",
 		"settings":{
@@ -205,6 +226,9 @@
 			"https://fantom-pokt.nodies.app",
 			"https://fantom-rpc.publicnode.com"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://ftmscan.com/",
 		"settings":{
 			"isNew": false,
@@ -233,6 +257,9 @@
 			"https://mainnet.era.zksync.io",
 			"https://1rpc.io/zksync2-era"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://explorer.zksync.io/",
 		"settings":{
 			"isNew": false,
@@ -259,6 +286,9 @@
 		"rpc": [
 			"https://zkevm-rpc.com"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://zkevm.polygonscan.com/",
 		"settings":{
 			"isNew": false,
@@ -284,6 +314,9 @@
 		"pubRPC": "https://moonriver-rpc.publicnode.com",
 		"rpc": [
 			"wss://moonriver.unitedbloc.com:2001"
+		],
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://moonriver.moonscan.io/",
 		"settings":{
@@ -314,6 +347,9 @@
 			"https://mantle.drpc.org",
 			"https://rpc.ankr.com/mantle"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://explorer.mantle.xyz/",
 		"settings":{
 			"isNew": false,
@@ -343,6 +379,9 @@
 			"https://1rpc.io/base",
 			"https://base-rpc.publicnode.com"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://base.blockscout.com/",
 		"settings":{
 			"isNew": false,
@@ -369,6 +408,9 @@
 		"rpc": [
 			"https://1rpc.io/mode",
 			"https://mainnet.mode.network"
+		],
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://modescan.io/",
 		"settings":{
@@ -399,6 +441,9 @@
 			"https://arbitrum.llamarpc.com",
 			"https://arbitrum-one-rpc.publicnode.com"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://arbiscan.io/",
 		"settings":{
 			"isNew": false,
@@ -425,6 +470,9 @@
 		"rpc": [
 			"https://forno.celo.org"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://celoscan.io/",
 		"settings":{
 			"isNew": false,
@@ -450,6 +498,9 @@
 		"pubRPC": "https://avalanche-c-chain-rpc.publicnode.com",
 		"rpc": [
 			"https://avalanche.blockpi.network/v1/rpc/public"
+		],
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://snowtrace.io/",
 		"settings":{
@@ -480,6 +531,9 @@
 			"https://linea.blockpi.network/v1/rpc/public",
 			"https://1rpc.io/linea"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://lineascan.build/",
 		"settings":{
 			"isNew": false,
@@ -509,6 +563,9 @@
 			"https://blast.blockpi.network/v1/rpc/public",
 			"https://rpc.envelop.is/blast"
 		],
+		"rpcPremium": [
+
+		],
 		"blockScan": "https://blastscan.io/",
 		"settings":{
 			"isNew": false,
@@ -527,16 +584,18 @@
 		"hexID": "0x82750",
 		"ID": 534352,
 		"name": "Scroll",
-		"fullName": "Scroll Mainet",
+		"fullName": "Scroll Mainnet",
 		"nativeCoin": "ETH",
 		"decimal": 18,
 		"confirmation": 2,
-		"pubRPC": "https://scroll.blockpi.network/v1/rpc/public",
+		"pubRPC": "https://rpc.scroll.io",
 		"rpc": [
-			"https://scroll.drpc.org",
 			"https://1rpc.io/scroll",
 			"https://rpc.scroll.io",
-			"https://scroll.blockpi.network/v1/rpc/public"
+			"https://scroll.drpc.org"
+		],
+		"rpcPremium": [
+			"https://scroll-mainnet.blastapi.io"
 		],
 		"blockScan": "https://blockscout.scroll.io/",
 		"settings":{
@@ -563,6 +622,9 @@
 		"pubRPC": "https://neon-proxy-mainnet.solana.p2p.org",
 		"rpc": [
 			"https://neon-proxy-mainnet.solana.p2p.org"
+		],
+		"rpcPremium": [
+
 		],
 		"blockScan": "https://neonscan.org/",
 		"settings":{

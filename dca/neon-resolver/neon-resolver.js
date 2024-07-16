@@ -17,6 +17,7 @@ async function snapsExecution(_rpc, _prvKey, _NRI, _gasPrice, _numberConfirmatio
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     let gasLimit = await getGasLimit(contract, "snapsExecution");
 
     await contract.snapsExecution({
@@ -54,8 +55,9 @@ async function executionStart(_rpc, _prvKey, _NRI, _arrayDcaIds, _gasPrice, _num
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     let gasLimit = await getGasLimit(contract, "executionStart", [_arrayDcaIds]);
-    
+
     await contract.executionStart(_arrayDcaIds, {
         gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
         gasLimit: gasLimit
@@ -92,6 +94,7 @@ async function updatePositions(_rpc, _prvKey, _NRI, _arrayDcaIds, _arrayDcaCode,
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     let gasLimit = await getGasLimit(contract, "updatePositions", [_arrayDcaIds, _arrayDcaCode]);
 
     await contract.updatePositions(_arrayDcaIds, _arrayDcaCode, {
@@ -130,6 +133,7 @@ async function executionCompletion(_rpc, _prvKey, _NRI, _arrayDcaIds, _maxDcaPer
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NRI, NRI, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     let gasLimit = await getGasLimit(contract, "executionCompletion", [_arrayDcaIds, _maxDcaPerExecution]);
 
     await contract.executionCompletion(_arrayDcaIds, _maxDcaPerExecution, {
@@ -169,6 +173,7 @@ async function addAmountProcessed(_rpc, _prvKey, _NDB, _chainId, _amountUSD, _pr
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NDB, NDB, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     let gasLimit = await getGasLimit(contract, "addAmountProcessed", [_chainId, definePrecisionForChain(_amountUSD, _precision)]);
 
     await contract.addAmountProcessed(_chainId, definePrecisionForChain(_amountUSD, _precision), {
@@ -211,6 +216,7 @@ async function storeExecutionData(_rpc, _prvKey, _NDB, _chainId, _arrayOwner, _a
     const signer = new ethers.Wallet(_prvKey, new ethers.providers.JsonRpcProvider(_rpc));
     const contract = new ethers.Contract(_NDB, NDB, signer);
     let code, message, hash;
+    if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
     let gasLimit = await getGasLimit(contract, "storeExecutionData", [_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount]);
 
     await contract.storeExecutionData(_arrayOwner, _arraySrcToken, _arrayDstToken, _arrayTokenValue, _arrayTokenAmount, {
