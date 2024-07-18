@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import ethers from "ethers";
 import { instance } from "./src/config.js";
-import { axiosErrorHandler, zeroXRouteHandler, zeroXSwapHandler, generateGetUrl, signAndSendTransaction } from "./src/utils.js";
+import { axiosErrorHandler, zeroXRouteHandler, zeroXSwapHandler, generateGetUrl, signAndSendTransaction, getGasLimit } from "./src/utils.js";
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 import zeroURL from "./src/baseUrl.json" assert {type: "json"};
 
@@ -171,8 +171,10 @@ async function approve(_rpc, _prvKey, _token, _amount, _spender, _gasPrice, _num
     const contract = new ethers.Contract(_token, ERC20, signer);
     let code, message, hash;
     if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
+    let gasLimit = await getGasLimit(contract, "approve", [_spender, _amount]);
     await contract.approve(_spender, _amount, {
-        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei")
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
     })
         .then(async function (tx) {
             code = 200;
@@ -207,8 +209,10 @@ async function transfer(_rpc, _prvKey, _token, _amount, _to, _gasPrice, _numberC
     const contract = new ethers.Contract(_token, ERC20, signer);
     let code, message, hash;
     if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
+    let gasLimit = await getGasLimit(contract, "transfer", [_to, _amount]);
     await contract.transfer(_to, _amount, {
-        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei")
+        gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
     })
         .then(async function (tx) {
             code = 200;

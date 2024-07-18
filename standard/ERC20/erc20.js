@@ -1,4 +1,5 @@
 import { ethers } from "ethers";
+import { getGasLimit } from "./src/utils.js"
 import ERC20 from "../../abi/ERC20.json" assert {type: "json"};
 
 /**
@@ -120,8 +121,10 @@ async function backendApprove(_rpc, _prvKey, _token, _amount, _spender, _gasPric
     const contract = new ethers.Contract(_token, ERC20, signer);
     let code, message, hash;
     if (_gasPrice == "0" || _gasPrice == "0.0") return { code: 406, message: "GasPrice must be > 0", hash: "nd" };
+    let gasLimit = await getGasLimit(contract, "approve", [_spender, _amount]);
     await contract.approve(_spender, _amount, {
         gasPrice: ethers.utils.parseUnits(_gasPrice, "gwei"),
+        gasLimit: gasLimit
     })
         .then(async function (tx) {
             code = 200;
